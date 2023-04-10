@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-wrapper {
+  margin-top: 65px;
+  padding: 180px 0 100px 0;
+  background-image: url(Baner.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+
+
+  text-align: left;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 54px;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+}
+
+.top-wrapper p {
+  text-align: left;
+  width: 715px;
+  height: 150px;
+  left: 82px;
+  top: 575px;
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 24px;
+
+  color: rgba(255, 255, 255);
+}
+
+.btn_signup {
+  background-color: #239b76;
+  font-size: 20px;
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.btn_signup:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 65px;
+  margin-top: 0px;
+  float:left;
+}
+.header-left-text{
+  margin-top: 6px;
+  padding-left: 80px;
+  width: 285px;
+  height: 0px;
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 30px;
+
+  color: rgba(0, 53, 107, 0.8);
+
+  mix-blend-mode: normal;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+  font-size: 21px;
+
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: #527760;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-icon{
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
+}
+
+.intro1-wrapper {
+  margin-top: 100px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+}
+
+.intro {
+  float: left;
+  width: 33%;
+}
+
+.intro-icon {
+  position: relative;
+}
+
+.intro-icon p {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: white;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 18px;
+  color: rgba(28, 25, 25, 0.8);
+}
+
+.intro2-wrapper {
+  margin-top: 0px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgba(255, 255, 255, 0);
+
+}
+.intro2-left{
+ float:left
+}
+.intro2-right{
+  padding-top:60px;
+  text-align: center;
+}
+.intro2-right h1{
+  color: #339f48;
+}
+.intro2-right p{
+  text-align: justify;
+  font-size: 20px;
+
+}
+
+.expert-wrapper {
+  margin-top: 50px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
+}
+.expert-heading{
+  font-weight: bolder;
+  font-size: 20px;
+  color: #339f48;
+}
+.expert {
+  float: left;
+  width: 25%;
+}
+
+.expert-image {
+  position: relative;
+}
+.expert-image img {
+  width:180px;
+  height :180px;
+  border-radius: 50%;
+}
+
+.expert-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 18px;
+  color: rgba(28, 25, 25, 0.8);
+}
+
+.message-heading h2 {
+  font-weight: bolder;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #339f48;
+}
+.message-heading h3 {
+  font-weight: normal;
+  font-size: 23px;
+}
+
+.message-wrapper {
+  margin-top: 65px;
+  padding-bottom: 50px;
+  background-image: url(4.png);
+  background-size:cover ;
+  color: white;
+  text-align: center;
+}
+.message-left{
+  padding-top: 50px;
+  text-align: left;
+  width: 50%;
+}
+.message-form{
+  display: block;
+  font-size:40px;
+  box-sizing: border-box;
+  line-height: 0;
+
+}
+.message-form input{
+  padding: 20px;
+  border-radius: 5%;
+}
+.message-form textarea{
+  padding: 20px;
+  resize: none;
+  border-radius: 5%;
+
+}
+
+.message {
+  padding: 15px 40px;
+  background-color: #5dca88;
+  color:white;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+  font-size: 20px;
+
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  padding-top: 8px;
+  width: 110px;
+  float: left;
+
+
+}
+
+footer h3{
+  padding-left: 130px;
+  text-align: left;
+}
+footer p {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  line-height:1px;
+  text-space: 13px;
+  margin-left: 130px;
+  text-align: left;
+}
+
+footer {
+
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
