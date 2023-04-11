@@ -86,4 +86,12 @@ header {
   font-size: 25px;
   color: aliceblue;
   font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0 7px #201d7a;
+
+}
+.Submit-btn button:active{
+  position: relative;
+  top: 7px;
+  box-shadow: none;
 }
