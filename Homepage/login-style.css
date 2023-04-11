@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+
+  top: 0;
+  z-index: 10;
+}
+.header-logo{
+  width: 80px;
+  margin-top: 0px;
+  float:left;
+}
+.header-text{
+  margin-top: 6px;
+  padding-left: 120px;
+  padding-top: 18px;
+  width: 350px;
+  height: 0px;
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+
+  color: rgba(0, 53, 107, 0.8);
+
+  mix-blend-mode: normal;
+}
+.body-left{
+  margin-top: 30px;
+  margin-left:-150px;
+}
+.left-img{
+  float:left;
+  width: 780px;
+  height: 650px;
+}
+.body-header{
+  font-family: "Inter";
+  color: rgba(0, 53, 107, 0.8);
+  font-style: normal;
+  padding-top:150px;
+  text-align: center;
+  font-size: 40px;
+}
+.user-input{
+  font-size: 18px;
+  float: left;
+  padding:20px;
+  width: 250px;
+}
+.password-input{
+  font-size: 18px;
+  padding:20px;
+  width: 250px;
+}
+.Submit-btn button{
+  background-color: rgb(24, 114, 203);
+  width: 500px;
+  padding: 18px;
+  font-size: 25px;
+  color: aliceblue;
+  font-weight: bolder;
+}
