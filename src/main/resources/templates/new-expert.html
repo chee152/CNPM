@@ -5,6 +5,47 @@
     <title>New Expert</title>
 </head>
 <body>
+    <form th:action="@{/expert/new}" method="post">
+        <div>
+            <h1>User Id:</h1>
+            <input type="number" name="user_id" th:value="${user_id}" readonly>
+        </div>
+        <div>
+            <h1>Họ và tên:</h1>
+            <input type="text" name="name" required>
+        </div>
 
+        <div>
+            <h1>Tuổi:</h1>
+            <input type="number" name="age" required>
+        </div>
+        <div>
+            <h1>Nơi làm việc:</h1>
+            <input type="text" name="works_at" required>
+        </div>
+        <div>
+            <h1>Địa chỉ:</h1>
+            <input type="text" name="address" required>
+        </div>
+        <div>
+            <h1>Email:</h1>
+            <input type="text" name="email" required>
+        </div>
+        <div>
+            <h1>Số điện thoại:</h1>
+            <input type="number" name="phone" required>
+        </div>
+        <div>
+            <h1>Giới thiệu:</h1>
+            <textarea name="introduction"></textarea>
+        </div>
+
+        <div>
+        <h1>Phí tư vấn:</h1>
+        <input type="number" name="fee" required>
+        </div>
+
+        <button type="submit">Đăng ký</button>
+    </form>
 </body>
 </html>

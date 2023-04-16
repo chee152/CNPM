@@ -36,10 +36,7 @@ public class LoginController {
         return "login-page.html";
     }
 
-    @GetMapping("/signup")
-    public String newUser(){
-        return "user-signup.html";
-    }
+
 
 
     @GetMapping({"/homepage","/"})
