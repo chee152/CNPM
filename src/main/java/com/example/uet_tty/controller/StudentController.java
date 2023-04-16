@@ -15,6 +15,6 @@ public class StudentController {
     StudentService studentService;
     @PostMapping("/student/new")
     public String createStudent(@ModelAttribute Student student){
-       return "";
+       studentService.create(student);
     }
 }
