@@ -16,5 +16,6 @@ public class StudentController {
     @PostMapping("/student/new")
     public String createStudent(@ModelAttribute Student student){
        studentService.create(student);
+       return "redirect:/login";
     }
 }

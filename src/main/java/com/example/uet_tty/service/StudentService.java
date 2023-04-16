@@ -21,5 +21,13 @@ public class StudentService {
     }
 
     @Transactional
-    public void
+    public void update(Student student){
+        Student currentStudent = studentRepo.findById(student.getStudent_id()).orElse(null);
+        if(currentStudent!=null){
+            studentRepo.save(student);
+        }
+    }
+    public Student searchByStudentId(int id){
+        return studentRepo.findByStudentId(id);
+    }
 }
