@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet">
+    <link th:href="@{/style/login-style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}" rel="shortcut icon">
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <img class="header-logo" th:src="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+        <h2 class="header-text">UET MENTAL CONSULTATION </h2>
+    </div>
+</header>
+<div class="body-wrapper">
+    <div class="container">
+        <div class="body-left">
+            <img class="left-img" th:src="@{https://www.hpmi.org/wp-content/uploads/2022/11/what-is-mental-health.webp}">
+        </div>
+        <div class="body-right">
+            <h2 class="body-header">Đăng nhập hệ thống</h2><br>
+            <form th:action="@{/login}" method="POST">
+                <input class="user-input" name="username" placeholder="Username" >
+                <input class="password-input" name="password" placeholder="Password"><br><br><br>
+                <div class="Submit-btn">
+                    <button class="form-button">Đăng nhập</button>
+                </div>
+            </form>
+            <form th:action="@{/new}" method="POST">
+                <div class="Submit-btn">
+                    <button class="form-button">Tạo tài khoản</button>
+                </div>
+            </form>
+
+            <h1 th:text="${msg}" style="color: red"></h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>

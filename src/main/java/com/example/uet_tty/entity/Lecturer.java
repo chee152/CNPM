@@ -2,24 +2,29 @@ package com.example.uet_tty.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @Entity
-public class Student {
+public class Lecturer {
     @Id
-    private int student_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int lecture_id;
 
+    //yeu cau not null
+    @Column(unique = true)
     private int user_id;
+
     private String name;
+
     private int age;
-    private String address;
+
     private String department;
+
+    private String introduction;
+
     @Column(unique = true)
     private String email;
-    @Column(unique = true)
-    private String phone;
 
 }
+

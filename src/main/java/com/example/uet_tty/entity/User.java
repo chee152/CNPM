@@ -16,7 +16,7 @@ public class User {
 
     private String password;
 
-    //1 la student, 2 la expert
+    //1 la student, 2 la expert, 3 la lecturer
     private int role;
 
 }

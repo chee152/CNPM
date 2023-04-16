@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Student</title>
+</head>
+<body>
+    <form th:action="@{/student/new}" method="POST">
+        <div>
+            <h1>User Id:</h1>
+            <input type="number" name="user_id" th:value="${user_id}" readonly>
+        </div>
+        <div>
+            <h1>Họ và tên:</h1>
+            <input type="text" name="name" required>
+        </div>
+        <div>
+            <h1>Mã sinh viên:</h1>
+            <input type="number" name="student_id" required>
+        </div>
+        <div>
+            <h1>Tuổi:</h1>
+            <input type="number" name="age" required>
+        </div>
+        <div>
+            <h1>Lớp:</h1>
+            <input type="text" name="department" required>
+        </div>
+        <div>
+            <h1>Địa chỉ:</h1>
+            <input type="text" name="address" required>
+        </div>
+        <div>
+            <h1>Email:</h1>
+            <input type="text" name="email" required>
+        </div>
+        <div>
+            <h1>Số điện thoại:</h1>
+            <input type="number" name="phone" required>
+        </div>
+        <button type="submit">Đăng ký</button>
+    </form>
+</body>
+</html>

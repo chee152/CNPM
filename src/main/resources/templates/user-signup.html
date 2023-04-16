@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+</head>
+<body>
+  <form th:action="@{/signup}" method="POST">
+    <div>
+      <h1>Username:</h1>
+      <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div>
+      <h1>Bạn là:</h1>
+    <select name="role" required>
+      <option value="1">Sinh viên</option>
+      <option value="2">Chuyên gia tâm lý</option>
+      <option value="3">Giảng viên</option>
+    </select>
+    </div>
+    <div>
+      <h1>Password:</h1>
+      <input type="password" name="password" placeholder="Password" required>
+      <h1>Re-enter password</h1>
+      <input type="password" name="reenterpassword" placeholder="Re-enter Password" required>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
