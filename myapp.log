@@ -980,3 +980,29 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2023-04-16 20:37:34.066  INFO 21624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-04-16 20:37:34.068  INFO 21624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-04-16 20:37:34.073  INFO 21624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-04-16 20:37:36.812  INFO 17200 --- [restartedMain] com.example.uet_tty.UetTtyApplication    : Starting UetTtyApplication using Java 18.0.2 on HuyPC with PID 17200 (D:\UET\BTL_CNPM\UET_TTY\target\classes started by huyng in D:\UET\BTL_CNPM\UET_TTY)
+2023-04-16 20:37:36.815  INFO 17200 --- [restartedMain] com.example.uet_tty.UetTtyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-04-16 20:37:36.847  INFO 17200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-16 20:37:36.849  INFO 17200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-16 20:37:37.207  INFO 17200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-16 20:37:37.245  INFO 17200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 6 JPA repository interfaces.
+2023-04-16 20:37:37.600  INFO 17200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8800 (http)
+2023-04-16 20:37:37.605  INFO 17200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-04-16 20:37:37.606  INFO 17200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-04-16 20:37:37.658  INFO 17200 --- [restartedMain] o.a.c.c.C.[.[localhost].[/uet_tty]       : Initializing Spring embedded WebApplicationContext
+2023-04-16 20:37:37.658  INFO 17200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 809 ms
+2023-04-16 20:37:37.756  INFO 17200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-16 20:37:37.948  INFO 17200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-16 20:37:37.976  INFO 17200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-16 20:37:38.012  INFO 17200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-04-16 20:37:38.121  INFO 17200 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-16 20:37:38.197  INFO 17200 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-04-16 20:37:38.591  INFO 17200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-16 20:37:38.598  INFO 17200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-16 20:37:38.823  WARN 17200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-16 20:37:39.069  INFO 17200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-04-16 20:37:39.096  INFO 17200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8800 (http) with context path '/uet_tty'
+2023-04-16 20:37:39.103  INFO 17200 --- [restartedMain] com.example.uet_tty.UetTtyApplication    : Started UetTtyApplication in 2.544 seconds (JVM running for 3.015)
+2023-04-16 20:37:44.928  INFO 17200 --- [http-nio-8800-exec-1] o.a.c.c.C.[.[localhost].[/uet_tty]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-16 20:37:44.928  INFO 17200 --- [http-nio-8800-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-04-16 20:37:44.929  INFO 17200 --- [http-nio-8800-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
