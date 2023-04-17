@@ -17,9 +17,7 @@ public class Student {
     private int age;
     private String address;
     private String department;
-    @Column(unique = true)
     private String email;
-    @Column(unique = true)
     private String phone;
 
 }

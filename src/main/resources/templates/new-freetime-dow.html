@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Freetime</title>
+</head>
+<h1>Thêm thời gian rảnh:</h1>
+<body>
+    <form th:action="@{/freetime/new}" method="GET">
+        <div>
+            <h1>Chọn thứ trong tuần:</h1>
+            <input type="checkbox" name="dow[]" value="1">Thứ hai<br>
+            <input type="checkbox" name="dow[]" value="2">Thứ ba<br>
+            <input type="checkbox" name="dow[]" value="3">Thứ tư<br>
+            <input type="checkbox" name="dow[]" value="4">Thứ năm<br>
+            <input type="checkbox" name="dow[]" value="5">Thứ sáu<br>
+            <input type="checkbox" name="dow[]" value="6">Thứ bảy<br>
+            <input type="checkbox" name="dow[]" value="7">Chủ nhật<br>
+        </div>
+        <button type="submit"></button>
+    </form>
+
+</body>
+</html>

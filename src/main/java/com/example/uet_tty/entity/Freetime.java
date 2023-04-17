@@ -20,6 +20,5 @@ public class Freetime {
     //bat dau tu thu 2 la 1 den chu nhat la 7
     private int dow;
 
-    private Time start_time;
-    private Time end_time;
+    private Time time;
 }

@@ -8,8 +8,10 @@ import org.springframework.data.repository.query.Param;
 import java.util.ArrayList;
 
 public interface ExpertRepo extends JpaRepository<Expert, Integer> {
-    @Query("SELECT e FROM Expert e WHERE e.name LIKE :x")
+    @Query("SELECT e FROM Expert e WHERE e.name LIKE '%:x%'")
     ArrayList<Expert> searchByName(@Param("x") String name);
 
 
+    //TODO: viet query
+//    ArrayList<Expert> getAvailableExpert(@Param("x") String date);
 }

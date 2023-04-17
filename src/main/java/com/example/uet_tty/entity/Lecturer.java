@@ -23,7 +23,6 @@ public class Lecturer {
 
     private String introduction;
 
-    @Column(unique = true)
     private String email;
 
 }
