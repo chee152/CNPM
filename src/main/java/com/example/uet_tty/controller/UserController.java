@@ -25,9 +25,15 @@ public class UserController {
             , @RequestParam("role") String role){
         if(!password.equals(reenterpassword)){
             String msg = "Mật khẩu không khớp!";
-            model.addAttribute("msg",msg);
+            model.addAttribute("msg1",msg);
             return "user-signup.html";
-        }else{
+
+        }else if(userService.findByUsername(username)!=null){
+            String msg = "Tên đăng nhập đã tồn tại";
+            model.addAttribute("msg2",msg);
+            return "user-signup.html";
+        }
+        else{
             User user = new User();
             user.setUsername(username);
             user.setPassword(password);
