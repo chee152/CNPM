@@ -14,6 +14,7 @@ public class User {
     @Column(unique = true)
     private String username;
 
+
     private String password;
 
     //1 la student, 2 la expert, 3 la lecturer

@@ -5,6 +5,7 @@ import com.example.uet_tty.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -12,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
     @Autowired
     UserService userService;
+
+    @GetMapping("/signup")
+    public String newUser(){
+        return "user-signup.html";
+    }
     @PostMapping("/signup")
     public String checkRole(@RequestParam("username") String username,
                             @RequestParam("password") String password,
@@ -24,7 +30,7 @@ public class UserController {
         }else{
             User user = new User();
             user.setUsername(username);
-            user.setUsername(password);
+            user.setPassword(password);
             int user_role;
             if(role.equals("1")){
                 user_role=1;

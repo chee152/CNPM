@@ -25,10 +25,13 @@ public class LoginController {
     }
 
     @PostMapping("/login")
+
     public String login(Model model, HttpSession session, @RequestParam("username") String username
             , @RequestParam("password") String password){
+
         if(loginService.check(username,password)){
-            session.setAttribute("username",username);
+            session.setAttribute("user_id",userService.findByUsername(username).getUser_id());
+            session.setAttribute("username", username);
             return "homepage.html";
         }
         String message="Incorrect username or password";
@@ -36,10 +39,7 @@ public class LoginController {
         return "login-page.html";
     }
 
-    @GetMapping("/signup")
-    public String newUser(){
-        return "user-signup.html";
-    }
+
 
 
     @GetMapping({"/homepage","/"})

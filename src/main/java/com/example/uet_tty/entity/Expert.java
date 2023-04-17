@@ -23,8 +23,8 @@ public class Expert {
 
     private String introduction;
 
-    @Column(unique = true)
     private String email;
 
+    private String phone;
     private double fee;
 }
