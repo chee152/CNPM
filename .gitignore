@@ -30,7 +30,6 @@ build/
 !**/src/test/**/build/
 
 myapp.log
-myapp.log.2023-04-15.0.gz
-myapp.log.2023-04-16.0.gz
+myapp.log.*
 ### VS Code ###
 .vscode/
