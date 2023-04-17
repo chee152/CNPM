@@ -24,7 +24,7 @@ a {
 .top-wrapper {
     margin-top: 65px;
     padding: 180px 0 100px 0;
-    background-image: url(Baner.png);
+    background-image:url(Baner.png);
     background-size: cover;
     color: white;
     text-align: center;
