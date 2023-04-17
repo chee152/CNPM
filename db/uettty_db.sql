@@ -34,10 +34,8 @@ CREATE TABLE `expert` (
   `fee` double NOT NULL DEFAULT '0',
   PRIMARY KEY (`expert_id`),
   UNIQUE KEY `user_id_UNIQUE` (`user_id`),
-  UNIQUE KEY `expert_id_UNIQUE` (`expert_id`),
-  UNIQUE KEY `phone_UNIQUE` (`phone`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `expert_id_UNIQUE` (`expert_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +44,7 @@ CREATE TABLE `expert` (
 
 LOCK TABLES `expert` WRITE;
 /*!40000 ALTER TABLE `expert` DISABLE KEYS */;
+INSERT INTO `expert` VALUES (6,1,'Nguyễn Tuấn Lộc',23,'Hà Nội','jlkfaj','loclieulinh@gmail.com','1123',200);
 /*!40000 ALTER TABLE `expert` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,8 +59,7 @@ CREATE TABLE `freetime` (
   `freetime_id` int NOT NULL AUTO_INCREMENT,
   `expert_id` int NOT NULL,
   `dow` int NOT NULL,
-  `start_time` time NOT NULL,
-  `end_time` time NOT NULL,
+  `time` time NOT NULL,
   PRIMARY KEY (`freetime_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -90,9 +88,9 @@ CREATE TABLE `lecturer` (
   `department` varchar(255) DEFAULT NULL,
   `introduction` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
+  `lecture_id` int NOT NULL,
   PRIMARY KEY (`lecturer_id`),
-  UNIQUE KEY `user_id_UNIQUE` (`user_id`),
-  UNIQUE KEY `email_UNIQUE` (`email`)
+  UNIQUE KEY `user_id_UNIQUE` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -177,9 +175,7 @@ CREATE TABLE `student` (
   `phone` varchar(45) NOT NULL,
   PRIMARY KEY (`student_id`),
   UNIQUE KEY `user_id_UNIQUE` (`user_id`),
-  UNIQUE KEY `student_id_UNIQUE` (`student_id`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
-  UNIQUE KEY `phonenumber_UNIQUE` (`phone`)
+  UNIQUE KEY `student_id_UNIQUE` (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -206,9 +202,8 @@ CREATE TABLE `user` (
   `password` varchar(10) NOT NULL,
   `role` int NOT NULL,
   PRIMARY KEY (`user_id`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  UNIQUE KEY `password_UNIQUE` (`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +212,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'test','test',1),(2,'21020633','123',1);
+INSERT INTO `user` VALUES (1,'test','test',1),(2,'21020633','123',1),(4,'loclieulinh','123',2),(6,'huy38','123',2);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -230,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-17  1:14:44
+-- Dump completed on 2023-04-17 11:34:45
