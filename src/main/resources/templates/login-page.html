@@ -31,6 +31,8 @@
                 <input class="password-input" name="password" placeholder="Password"><br><br><br>
                 <div class="Submit-btn">
                     <button class="form-button">Đăng nhập</button>
+                    <br>
+                    <br>
                 </div>
             </form>
             <form th:action="@{/signup}" method="GET">
@@ -39,7 +41,7 @@
                 </div>
             </form>
 
-            <h1 th:text="${msg}" style="color: red"></h1>
+            <h3 th:text="${msg}" style="color: red"></h3>
         </div>
     </div>
 </div>
