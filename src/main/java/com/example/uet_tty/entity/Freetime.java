@@ -1,6 +1,7 @@
 package com.example.uet_tty.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,6 +20,9 @@ public class Freetime {
 
     //bat dau tu thu 2 la 1 den chu nhat la 7
     private int dow;
+    @DateTimeFormat(pattern = "HH:mm")
+    private Time time_start;
+    @DateTimeFormat(pattern = "HH:mm")
 
-    private Time time;
+    private Time time_end;
 }

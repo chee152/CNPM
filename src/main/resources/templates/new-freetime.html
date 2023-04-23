@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Freetime</title>
+</head>
+<h1>Thêm thời gian rảnh:</h1>
+<body>
+    <form th:action="@{/freetime/new}" method="POST">
+        <div>
+
+            <div>
+            <select name="dow" required>
+                <option value=1>Thứ hai</option>
+                <option value=2>Thứ ba</option>
+                <option value=3>Thứ tư</option>
+                <option value=4>Thứ năm</option>
+                <option value=5>Thứ sáu</option>
+                <option value=6>Thứ bảy</option>
+                <option value=7>Chủ nhật</option>
+            </select>
+            </div>
+            <div>
+                <h1>Giờ bắt đầu</h1>
+                <input type="time" name="time_start">
+                <h1>Giờ nghỉ</h1>
+                <input type="time" name="time_end">
+            </div>
+            <div>
+                <h1>Giờ kết thúc</h1>
+            </div>
+        </div>
+        <button type="submit">Đăng ký</button>
+    </form>
+
+</body>
+</html>

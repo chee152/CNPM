@@ -33,5 +33,7 @@ public class ExpertService {
     public ArrayList<Expert> searchName(String name){
         return expertRepo.searchByName(name);
     }
-
+    public int getIdByUserId(int user_id){
+       return expertRepo.getExpertIdByUserId(user_id);
+    }
 }

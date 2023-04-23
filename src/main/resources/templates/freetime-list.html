@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freetime List</title>
+</head>
+<body>
+<h1>Lịch rảnh của chuyên gia</h1>
+<a th:href="@{/freetime/new}">Thêm lịch rảnh</a>
+  <table>
+    <tr>
+      <th>Thứ</th>
+      <th>Thời gian bắt đầu</th>
+      <th>Thời gian kết thúc</th>
+      <th>Thao tác</th>
+    </tr>
+    <tr th:each="l:${freetime_list}">
+      <td th:text="${l.dow}"></td>
+      <td th:text="${l.time_start}"></td>
+      <td th:text="${l.time_end}"></td>
+      <td>
+        <a th:href="@{'/freetime/delete?id='+${l.freetime_id}}">Xóa</a>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

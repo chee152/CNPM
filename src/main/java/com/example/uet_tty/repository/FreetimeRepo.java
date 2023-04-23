@@ -12,6 +12,9 @@ public interface FreetimeRepo extends JpaRepository<Freetime, Integer> {
    ArrayList<Freetime> findByExpertId(@Param("x") int expert_id);
 
 
-    @Query("SELECT f FROM Freetime f WHERE f.dow= :x ORDER BY f.time")
+    @Query("SELECT f FROM Freetime f WHERE f.dow= :x ORDER BY f.time_start")
     ArrayList<Freetime> findByDow(@Param("x") int dow);
+
+
+
 }
