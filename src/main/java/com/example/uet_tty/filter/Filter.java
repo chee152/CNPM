@@ -19,9 +19,7 @@ public class Filter extends GenericFilter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession();
         Object key = session.getAttribute("user_id");
-        if(key!=null){
-            filterChain.doFilter(servletRequest, servletResponse);
-        }else{
+        if(key==null){
             request= new HttpServletRequestWrapper((HttpServletRequest) servletRequest){
                 @Override
                 public String getRequestURI(){

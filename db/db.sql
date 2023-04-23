@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `uettty` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `uettty`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: uettty
@@ -59,9 +61,10 @@ CREATE TABLE `freetime` (
   `freetime_id` int NOT NULL AUTO_INCREMENT,
   `expert_id` int NOT NULL,
   `dow` int NOT NULL,
-  `time` time NOT NULL,
+  `time_start` time NOT NULL,
+  `time_end` time NOT NULL,
   PRIMARY KEY (`freetime_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,4 +228,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-17 11:34:45
+-- Dump completed on 2023-04-24  0:31:13
