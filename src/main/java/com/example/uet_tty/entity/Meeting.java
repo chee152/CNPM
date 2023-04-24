@@ -1,6 +1,7 @@
 package com.example.uet_tty.entity;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,10 +20,13 @@ public class Meeting {
     private int expert_id;
 
     private String student_id;
-
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
-    private Time time;
+    @DateTimeFormat(pattern = "HH:mm")
+    private Time time_start;
+    @DateTimeFormat(pattern = "HH:mm")
+    private Time time_end;
 
     //1 dang cho, 2 xac nhan, 3 khong chap nhan, 4 hoan thanh
     private int status;

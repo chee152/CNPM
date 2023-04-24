@@ -15,7 +15,16 @@
       <th>Thao tác</th>
     </tr>
     <tr th:each="l:${freetime_list}">
-      <td th:text="${l.dow}"></td>
+      <td th:switch="${l.dow}">
+        <span th:case=1>Thứ hai</span>
+        <span th:case=2>Thứ ba</span>
+        <span th:case=3>Thứ tư</span>
+        <span th:case=4>Thứ năm</span>
+        <span th:case=5>Thứ sáu</span>
+        <span th:case=6>Thứ bảy</span>
+        <span th:case=7>Chủ nhật</span>
+
+      </td>
       <td th:text="${l.time_start}"></td>
       <td th:text="${l.time_end}"></td>
       <td>

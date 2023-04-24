@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <table border="1">
+    <tr>
+      <th>Thông tin bác sĩ</th>
+      <th>Phí dịch vụ</th>
+      <th>Đánh giá</th>
+      <th>Thời gian làm việc</th>
+      <th>Đăng ký</th>
+    </tr>
+    <tr th:each="l: ${list}">
+      <td>
+    <h3>Họ và tên</h3>
+    <p th:text="${l.name}"></p>
+        <h3>Tuổi</h3>
+    <p th:text="${l.age}"></p>
+        <h3>Email</h3>
+    <p th:text="${l.email}"></p>
+        <h3>Số điện thoại</h3>
+    <p th:text="${l.phone}"></p>
+      </td>
+
+    <td th:text="${l.fee}"></td>
+    <td th:text="${l.rating}"></td>
+
+    <td>
+      <ul th:each="t: ${l.timeAvailable}">
+      <li th:text="${t.time_start}"></li>
+      <li th:text="${t.time_end}"></li>
+      </ul>
+    </td>
+    <td>
+      <a th:href="@{'/meeting/request?id='+${l.expert_id}}">Đăng ký tư vấn</a>
+    </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
