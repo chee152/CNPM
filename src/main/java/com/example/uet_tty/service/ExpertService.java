@@ -36,4 +36,8 @@ public class ExpertService {
     public int getIdByUserId(int user_id){
        return expertRepo.getExpertIdByUserId(user_id);
     }
+
+    public Expert getByExpertId(int id){
+        return expertRepo.findById(id).orElse(null);
+    }
 }

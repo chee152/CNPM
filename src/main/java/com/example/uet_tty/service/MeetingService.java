@@ -1,6 +1,7 @@
 package com.example.uet_tty.service;
 
 import com.example.uet_tty.dto.AvailableExpertDTO;
+import com.example.uet_tty.dto.FreetimeDTO;
 import com.example.uet_tty.dto.MeetingDTO;
 import com.example.uet_tty.dto.TimeAvailable;
 import com.example.uet_tty.entity.Expert;
@@ -92,6 +93,7 @@ public class MeetingService {
             case 3: dow = 2;
             break;
             case 4: dow =3;
+            break;
             case 5: dow = 4;
             break;
             case 6: dow = 5;
@@ -126,5 +128,44 @@ public class MeetingService {
                 list.add(a);
             }
         return list;
+    }
+    public List<FreetimeDTO> getFreetimeByExpertIdAndDate(int expert_id, String date){
+        int dow=1;
+        try {
+            Date date1 = new SimpleDateFormat("yyyy-MM-dd").parse(date);
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date1);
+            dow=cal.get(Calendar.DAY_OF_WEEK);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        switch (dow){
+            case 1: dow = 7;
+                break;
+            case 2: dow =1;
+                break;
+            case 3: dow = 2;
+                break;
+            case 4: dow =3;
+                break;
+            case 5: dow = 4;
+                break;
+            case 6: dow = 5;
+                break;
+            case 7: dow = 6;
+                break;
+        }
+        ArrayList<Freetime> freetimes = freetimeRepo.findByDateAndExpert_id(dow, expert_id);
+        ArrayList<FreetimeDTO> freetimeDTOS = new ArrayList<>();
+        for(Freetime f: freetimes){
+            FreetimeDTO freetimeDTO = new FreetimeDTO();
+            freetimeDTO.setFreetime_id(f.getFreetime_id());
+            freetimeDTO.setDow(f.getDow());
+            freetimeDTO.setTime_start(f.getTime_start().toString());
+            freetimeDTO.setExpert_id(f.getExpert_id());
+            freetimeDTO.setTime_end(f.getTime_end().toString());
+            freetimeDTOS.add(freetimeDTO);
+        }
+        return freetimeDTOS;
     }
 }

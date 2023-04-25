@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký tư vấn</title>
+</head>
+<body>
+  <form th:action="@{/meeting/request}" method="post">
+    <h1>Đăng ký tư vấn</h1>
+    <label>Chuyên gia <span th:text="${expert.name}"></span></label>
+    <div>
+      <input type="number" name="id" th:value="${expert.expert_id}" hidden>
+      <input type="text" th:value="${date}" readonly>
+    </div>
+    <div>
+      <h1>Khung thời gian làm việc</h1>
+      <ul th:each="l:${freetimeList}">
+        <li th:text="${l.time_start}"></li>
+        <li th:text="${l.time_end}"></li>
+
+      </ul>
+    </div>
+    <div>
+      <label>Chọn giờ muốn tư vấn:</label>
+      <input type="time" name="time_start" required>
+    </div>
+    <div>
+      <label>Gửi lời nhắn cho chuyên gia:</label>
+      <textarea type="text" name="note"></textarea>
+    </div>
+    <div>
+      <button type="submit">Đăng ký</button>
+    </div>
+    <div>
+      <p style="color: red" th:text="${msg}"></p>
+    </div>
+  </form>
+</body>
+</html>
