@@ -10,7 +10,7 @@
     <label>Chuyên gia <span th:text="${expert.name}"></span></label>
     <div>
       <input type="number" name="id" th:value="${expert.expert_id}" hidden>
-      <input type="text" th:value="${date}" readonly>
+      <input type="text" th:value="${date}" name="date" readonly>
     </div>
     <div>
       <h1>Khung thời gian làm việc</h1>
@@ -22,7 +22,7 @@
     </div>
     <div>
       <label>Chọn giờ muốn tư vấn:</label>
-      <input type="time" name="time_start" required>
+      <input type="time" name="time" required>
     </div>
     <div>
       <label>Gửi lời nhắn cho chuyên gia:</label>

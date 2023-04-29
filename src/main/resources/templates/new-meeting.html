@@ -9,7 +9,7 @@
     <form th:action="@{/meeting/search}" method="GET">
         <div>
         <h1>Nhập ngày bạn muốn tìm chuyên gia:</h1>
-        <input type="date" name="date" placeholder="Nhập ngày">
+        <input type="date" th:attr="min=${min}" name="date" placeholder="Nhập ngày">
         </div>
         <button type="submit">Submit</button>
     </form>

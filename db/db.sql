@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `uettty` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `uettty`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
 --
 -- Host: localhost    Database: uettty
@@ -64,7 +62,7 @@ CREATE TABLE `freetime` (
   `time_start` time NOT NULL,
   `time_end` time NOT NULL,
   PRIMARY KEY (`freetime_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,6 +71,7 @@ CREATE TABLE `freetime` (
 
 LOCK TABLES `freetime` WRITE;
 /*!40000 ALTER TABLE `freetime` DISABLE KEYS */;
+INSERT INTO `freetime` VALUES (2,1,1,'10:13:00','21:15:00'),(3,1,1,'07:00:00','10:00:00');
 /*!40000 ALTER TABLE `freetime` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,10 +119,10 @@ CREATE TABLE `meeting` (
   `date` date NOT NULL,
   `status` int NOT NULL,
   `note` varchar(255) DEFAULT NULL,
-  `datetime` varchar(255) DEFAULT NULL,
-  `time` time DEFAULT NULL,
+  `time_start` time NOT NULL,
+  `time_end` time NOT NULL,
   PRIMARY KEY (`meeting_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,6 +131,7 @@ CREATE TABLE `meeting` (
 
 LOCK TABLES `meeting` WRITE;
 /*!40000 ALTER TABLE `meeting` DISABLE KEYS */;
+INSERT INTO `meeting` VALUES (1,1,'1','2023-05-01',1,NULL,'10:00:00','11:00:00'),(2,1,'21020633','2023-05-01',1,'','14:15:00','15:15:00'),(3,1,'21020633','2023-05-01',1,'','14:14:00','15:14:00');
 /*!40000 ALTER TABLE `meeting` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -228,4 +228,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-24  0:31:13
+-- Dump completed on 2023-04-29 22:06:08

@@ -30,4 +30,7 @@ public class StudentService {
     public Student searchByStudentId(int id){
         return studentRepo.findByStudentId(id);
     }
+    public Student searchByUserId(int id){
+        return studentRepo.findByUserId(id);
+    }
 }

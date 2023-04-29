@@ -8,4 +8,7 @@ import org.springframework.data.repository.query.Param;
 public interface StudentRepo extends JpaRepository<Student, Integer> {
     @Query("SELECT s FROM Student s WHERE s.student_id= :x")
      Student findByStudentId(@Param("x") int id);
+
+    @Query("select s from Student s where s.user_id=:x")
+    Student findByUserId(@Param("x") int id);
 }

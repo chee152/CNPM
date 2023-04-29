@@ -12,8 +12,7 @@ public interface ExpertRepo extends JpaRepository<Expert, Integer> {
     ArrayList<Expert> searchByName(@Param("x") String name);
 
 
-    //TODO: viet query
-//    ArrayList<Expert> getAvailableExpert(@Param("x") String date);
+
     @Query("SELECT e.expert_id from Expert e WHERE e.user_id= :x")
     int getExpertIdByUserId(@Param("x") int id);
 

@@ -2,12 +2,15 @@ package com.example.uet_tty.dto;
 
 import lombok.Data;
 
-
 @Data
-public class MeetingDTO {
+public class ListMeetingDTO {
     private int meeting_id;
 
+    private String expert_name;
+
     private int expert_id;
+
+    private String student_name;
 
     private int student_id;
 
@@ -20,4 +23,8 @@ public class MeetingDTO {
     private int status;
 
     private String note;
+    private String expert_email;
+    private String expert_phone;
+    private String student_email;
+    private String student_phone;
 }

@@ -7,8 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
 import java.sql.Time;
+import java.util.Date;
 
 @Entity
 @Data
@@ -19,7 +19,7 @@ public class Meeting {
 
     private int expert_id;
 
-    private String student_id;
+    private int student_id;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 

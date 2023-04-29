@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting List</title>
+</head>
+<body>
+    <h1>Danh sách lịch hẹn sắp tới</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Chuyên gia</th>
+            <th>Ngày</th>
+            <th>Thời gian bắt đầu</th>
+            <th>Ghi chú</th>
+            <th>Trạng thái</th>
+            <th>Hủy</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="l:${list}">
+            <td >
+                <p th:text="${l.expert_name}"></p>
+                <p th:text="${l.expert_phone}"></p>
+                <p th:text="${l.expert_email}"></p>
+            </td>
+            <td th:text="${l.date}"></td>
+            <td th:text="${l.time_start}"></td>
+            <td th:text="${l.note}"></td>
+            <td th:switch="${l.status}">
+                <span th:case=1>Đang chờ</span>
+                <span th:case=2>Xác nhận</span>
+                <span th:case=3>Hủy</span>
+                <span th:case=4>Hoàn thành</span>
+            </td>
+            <td>
+                <a th:href="@{'/meeting/cancel?id='+${l.meeting_id}}">Hủy đăng ký</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
