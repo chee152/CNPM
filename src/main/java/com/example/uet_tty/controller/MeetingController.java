@@ -2,14 +2,12 @@ package com.example.uet_tty.controller;
 
 import com.example.uet_tty.dto.AvailableExpertDTO;
 import com.example.uet_tty.dto.ListMeetingDTO;
-import com.example.uet_tty.entity.Meeting;
-import com.example.uet_tty.repository.MeetingRepo;
-import com.example.uet_tty.repository.StudentRepo;
 import com.example.uet_tty.service.ExpertService;
 import com.example.uet_tty.service.MeetingService;
 import com.example.uet_tty.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,6 +30,7 @@ public class MeetingController {
 
     @Autowired
     StudentService studentService;
+
 
     @GetMapping("/new")
     public String newMeeting(Model model){
@@ -73,9 +72,10 @@ public class MeetingController {
     }
     @GetMapping("/incoming")
     public String getIncomingMeeting(Model model, HttpSession session){
+        meetingService.updateStatus();
         List<ListMeetingDTO> list=
                 meetingService.getIncomingMeeting(studentService.searchByUserId((int) session.getAttribute("user_id")).getStudent_id());
-        meetingService.updateStatus();
+
         model.addAttribute("list", list);
         return "incoming-meeting-student.html";
     }
@@ -85,16 +85,54 @@ public class MeetingController {
         meetingService.cancel(meeting_id);
         return "redirect:/meeting/incoming";
     }
-    //TODO viet them lich su meeting
+
     //TODO viet cho bac si: hien thi request, incoming
     //TODO cho phep chap nhan hoac huy
     //TODO viet them lich su meeting cho bac si
-    //TODO cho phep bac si nhan da hoan thanh buoi kham
+
     @GetMapping("/history")
     public String history(Model model, HttpSession session){
+        meetingService.updateStatus();
         List<ListMeetingDTO> list =
         meetingService.getMeetingHistory(studentService.searchByUserId((int) session.getAttribute("user_id")).getStudent_id());
         model.addAttribute("list", list);
         return "meeting-history-student.html";
+    }
+
+
+    @GetMapping("/expert/incoming")
+    public String incomingExpert(Model model, HttpSession session){
+        meetingService.updateStatus();
+        List<ListMeetingDTO> list =
+                meetingService.getMeetingHistoryExpert(expertService.getByUserId((int) session.getAttribute("user_id")).getExpert_id());
+        model.addAttribute("list",list);
+        return "incoming-meeting-expert.html";
+    }
+
+    @GetMapping("/expert/cancel")
+    public String cancel(@RequestParam("id") int meeting_id){
+        meetingService.cancel(meeting_id);
+        return "redirect:/meeting/expert/incoming";
+    }
+
+    @GetMapping("/expert/accept")
+    public String acceptMeeting(@RequestParam("id") int meeting_id){
+        meetingService.accept(meeting_id);
+        return "redirect:/meeting/expert/incoming";
+    }
+
+    @GetMapping("/expert/history")
+    public String getHistory(Model model, HttpSession session){
+        meetingService.updateStatus();
+        List<ListMeetingDTO> list =
+                meetingService.getMeetingHistoryExpert(expertService.getIdByUserId((int) session.getAttribute("user_id")));
+        model.addAttribute("list", list);
+        return "meeting-history-expert.html";
+    }
+
+    @PostMapping("/expert/note")
+    public String changeNote(@RequestParam("id") int meeting_id, @RequestParam("note") String note){
+        meetingService.updateNote(meeting_id, note);
+        return "redirect:/meeting/expert/history";
     }
 }

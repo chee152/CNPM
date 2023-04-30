@@ -16,5 +16,6 @@ public interface ExpertRepo extends JpaRepository<Expert, Integer> {
     @Query("SELECT e.expert_id from Expert e WHERE e.user_id= :x")
     int getExpertIdByUserId(@Param("x") int id);
 
-
+    @Query("SELECT e from Expert e where e.user_id=:x")
+    Expert getExpertByUserId(@Param("x") int id);
 }

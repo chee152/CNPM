@@ -17,4 +17,6 @@ public class Rating {
     private int expert_id;
 
     private double score;
+
+    private String message;
 }

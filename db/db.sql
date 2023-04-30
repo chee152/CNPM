@@ -146,6 +146,7 @@ CREATE TABLE `rating` (
   `expert_id` int NOT NULL,
   `rating_id` int NOT NULL AUTO_INCREMENT,
   `score` double DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`rating_id`),
   UNIQUE KEY `rating_id_UNIQUE` (`rating_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -228,4 +229,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-29 22:06:08
+-- Dump completed on 2023-04-30 20:35:31

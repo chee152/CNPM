@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Rating</title>
+</head>
+<body>
+<h1>Đánh giá chuyên gia</h1>
+<div>
+<h3>Chuyên gia:</h3>
+<span th:text="${expert_name}"></span>
+</div>
+<form th:action="@{/rating}" method="post">
+<div>
+  <label>Mức độ hài lòng:</label>
+<input th:value="${expert_id}" name="expert_id" hidden>
+  <select name="score" required>
+    <option value=1>Rất không hài lòng</option>
+    <option value=2>Không hài lòng</option>
+    <option value=3>Tạm ổn</option>
+    <option value=4>Hài lòng</option>
+    <option value=5>Rất hài lòng</option>
+  </select>
+</div>
+<div>
+  <label>Để lại bình luận</label>
+  <textarea type="text" name="message"></textarea>
+</div>
+<div>
+  <button type="submit">Xác nhận</button>
+</div>
+</form>
+</body>
+</html>

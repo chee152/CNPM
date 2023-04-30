@@ -28,7 +28,7 @@ public class Meeting {
     @DateTimeFormat(pattern = "HH:mm")
     private Time time_end;
 
-    //1 dang cho, 2 xac nhan, 3 khong chap nhan, 4 hoan thanh
+    //1 dang cho, 2 xac nhan, 3 khong chap nhan, 4 hoan thanh 5 huy
     private int status;
 
     private String note;

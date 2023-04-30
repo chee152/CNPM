@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Meeting List</title>
+    <title>Incoming meeting</title>
 </head>
 <body>
     <h1>Danh sách lịch hẹn sắp tới</h1>
     <table>
         <thead>
         <tr>
+            <th>STT</th>
             <th>Chuyên gia</th>
             <th>Ngày</th>
             <th>Thời gian bắt đầu</th>
@@ -18,7 +19,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="l:${list}">
+        <tr th:each="l, itrStat:${list}">
+            <td th:text="${itrStat.index + 1}"></td>
             <td >
                 <p th:text="${l.expert_name}"></p>
                 <p th:text="${l.expert_phone}"></p>

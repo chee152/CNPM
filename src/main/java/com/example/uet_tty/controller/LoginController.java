@@ -31,8 +31,12 @@ public class LoginController {
 
         if(loginService.check(username,password)){
             session.setAttribute("user_id",userService.findByUsername(username).getUser_id());
+            if(userService.findByUsername(username).getRole()==1) {
+                session.setAttribute("username", username);
+                return "homepage.html";
+            }
             session.setAttribute("username", username);
-            return "homepage.html";
+            return "homepage-expert.html";
         }
         String message="Incorrect username or password";
         model.addAttribute("msg",message);

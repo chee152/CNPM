@@ -308,4 +308,50 @@ public class MeetingService {
         }
         return list;
     }
+    public List<ListMeetingDTO> getMeetingHistoryExpert(int expert_id) {
+        ArrayList<Meeting> meetingList = meetingRepo.findAllByExpertId(expert_id);
+        ArrayList<ListMeetingDTO> list = new ArrayList<>();
+        for (Meeting i : meetingList) {
+            ListMeetingDTO meetingDTO = new ListMeetingDTO();
+            meetingDTO.setMeeting_id(i.getMeeting_id());
+            meetingDTO.setStatus(i.getStatus());
+            meetingDTO.setNote(i.getNote());
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String date = dateFormat.format(i.getDate());
+            meetingDTO.setDate(date);
+            String expert_name = Objects.requireNonNull(expertRepo.findById(i.getExpert_id()).orElse(null)).getName();
+            meetingDTO.setExpert_name(expert_name);
+            meetingDTO.setExpert_id(i.getExpert_id());
+            meetingDTO.setStudent_id(i.getStudent_id());
+            meetingDTO.setTime_end(i.getTime_end().toString());
+            meetingDTO.setTime_start(i.getTime_start().toString());
+            String student_name = studentRepo.findByStudentId(i.getStudent_id()).getName();
+            meetingDTO.setStudent_name(student_name);
+            String expert_email = Objects.requireNonNull(expertRepo.findById(i.getExpert_id()).orElse(null)).getEmail();
+            String expert_phone = Objects.requireNonNull(Objects.requireNonNull(expertRepo.findById(i.getExpert_id()).orElse(null)).getPhone());
+            String student_email = studentRepo.findByStudentId(i.getStudent_id()).getEmail();
+            String student_phone = studentRepo.findByStudentId(i.getStudent_id()).getPhone();
+            meetingDTO.setExpert_email(expert_email);
+            meetingDTO.setExpert_phone(expert_phone);
+            meetingDTO.setStudent_email(student_email);
+            meetingDTO.setStudent_phone(student_phone);
+            list.add(meetingDTO);
+        }
+        return list;
+    }
+    public void accept(int meeting_id){
+        Meeting meeting = meetingRepo.findById(meeting_id).orElse(null);
+        if(meeting!=null){
+            meeting.setStatus(2);
+        }
+        assert meeting != null;
+        meetingRepo.save(meeting);
+    }
+    public void updateNote(int meeting_id, String note){
+        Meeting meeting = meetingRepo.findById(meeting_id).orElse(null);
+
+        if (meeting != null) {
+            meeting.setNote(note);
+        }
+    }
 }

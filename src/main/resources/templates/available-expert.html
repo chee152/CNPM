@@ -8,13 +8,16 @@
 <div>
   <table border="1">
     <tr>
+      <th></th>
+      <th>STT</th>
       <th>Thông tin bác sĩ</th>
       <th>Phí dịch vụ</th>
       <th>Đánh giá</th>
       <th>Thời gian làm việc</th>
       <th>Đăng ký</th>
     </tr>
-    <tr th:each="l: ${list}">
+    <tr th:each="l,itrStat: ${list}">
+      <td th:text="${itrStat.index + 1}"></td>
       <td>
     <h3>Họ và tên</h3>
     <p th:text="${l.name}"></p>
