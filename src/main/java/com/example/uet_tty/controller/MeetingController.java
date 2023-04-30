@@ -86,9 +86,7 @@ public class MeetingController {
         return "redirect:/meeting/incoming";
     }
 
-    //TODO viet cho bac si: hien thi request, incoming
-    //TODO cho phep chap nhan hoac huy
-    //TODO viet them lich su meeting cho bac si
+
 
     @GetMapping("/history")
     public String history(Model model, HttpSession session){
