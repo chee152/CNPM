@@ -31,13 +31,9 @@ public class LoginController {
 
         if(loginService.check(username,password)){
             session.setAttribute("user_id",userService.findByUsername(username).getUser_id());
-            if(userService.findByUsername(username).getRole()==1) {
-                session.setAttribute("username", username);
-                return "homepage.html";
+            session.setAttribute("user_name", username);
+                return "redirect:/homepage";
             }
-            session.setAttribute("username", username);
-            return "homepage-expert.html";
-        }
         String message="Incorrect username or password";
         model.addAttribute("msg",message);
         return "login-page.html";
@@ -47,8 +43,13 @@ public class LoginController {
 
 
     @GetMapping({"/homepage","/"})
-    public String homepage(){
-        return "homepage.html";
+    public String homepage(HttpSession session, Model model){
+        model.addAttribute("username",session.getAttribute("user_name"));
+        if(userService.findByUsername((String) session.getAttribute("user_name")).getRole()==1) {
+            return "homepage.html";
+        }else {
+            return "homepage-expert.html";
+        }
     }
 
     @GetMapping("/logout")
