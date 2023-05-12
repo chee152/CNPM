@@ -266,7 +266,7 @@ public class MeetingService {
         DateTimeFormatter formatter = DateTimeFormatter.ISO_TIME;
         LocalTime time = LocalTime.now();
         String current_time= time.format(formatter);
-        List<Meeting> MeetingList = meetingRepo.findAllMeetingBefore(current_date,"'"+current_time+"'");
+        List<Meeting> MeetingList = meetingRepo.findAllMeetingBefore(current_date);
         for(Meeting m: MeetingList){
             if(m.getStatus()==1){
                 m.setStatus(3);

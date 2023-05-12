@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h1>Thông tin học sinh</h1>
+<div>
+    <h3>Tên:<span th:text="${student.name}"></span> </h3>
+    <h3>Tuổi:<span th:text="${student.age}"></span> </h3>
+    <h3>Địa chỉ:<span th:text="${student.address}"></span> </h3>
+    <h3>Khoa:<span th:text="${student.department}"></span> </h3>
+    <h2>Thông tin liên hệ:</h2>
+    <h3>Số điện thoại:<span th:text="${student.phone}"></span> </h3>
+    <h3>Email:<span th:text="${student.email}"></span> </h3>
+</div>
+<h2>Sửa thông tin:</h2>
+<a th:href="@{'/expert/edit?id='+${student_id}}">Sửa thông tin</a>
+</body>
+</html>

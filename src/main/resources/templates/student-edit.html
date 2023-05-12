@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<h1>Sửa thông tin</h1>
+<form th:action="@{/student/edit}" method="post" th:object="${student}">
+    <div>
+        <label>Tên:</label>
+        <input th:field="*{name}">
+    </div>
+    <div>
+        <label>Tuổi:</label>
+        <input th:field="*{age}">
+    </div>
+    <div>
+        <label>Địa chỉ:</label>
+        <input th:field="*{address}">
+    </div>
+    <div>
+        <label>Khoa:</label>
+        <input th:field="*{department}">
+    </div>
+    <h2>Thông tin liên hệ:</h2>
+    <div>
+        <label>Số điện thoại:</label>
+        <input th:field="*{phone}">
+    </div>
+    <div>
+        <label>Email:</label>
+        <input th:field="*{email}">
+    </div>
+    <button type="submit">Ghi nhận</button>
+</form>
+</body>
+</html>

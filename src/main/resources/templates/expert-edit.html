@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Sửa thông tin</h1>
+    <form th:action="@{/expert/edit}" method="post" th:object="${expert}">
+        <div>
+        <label>Tên:</label>
+        <input th:field="*{name}">
+        </div>
+        <div>
+            <label>Tuổi:</label>
+            <input th:field="*{age}">
+        </div>
+        <div>
+            <label>Nơi làm việc:</label>
+            <input th:field="*{works_at}">
+        </div>
+        <div>
+            <label>Giới thiệu:</label>
+            <input th:field="*{introduction}">
+        </div>
+        <div>
+            <label>Phí tư vấn:</label>
+            <input th:field="*{fee}">
+        </div>
+        <h2>Thông tin liên hệ:</h2>
+        <div>
+            <label>Số điện thoại:</label>
+            <input th:field="*{phone}">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input th:field="*{email}">
+        </div>
+        <button type="submit">Ghi nhận</button>
+    </form>
+
+</body>
+</html>

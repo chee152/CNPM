@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+<h1>Thông tin chuyên gia</h1>
+<div>
+    <h3>Tên:<span th:text="${expert.name}"></span> </h3>
+    <h3>Tuổi:<span th:text="${expert.age}"></span> </h3>
+    <h3>Nơi làm việc:<span th:text="${expert.works_at}"></span> </h3>
+    <h3>Giới thiệu:<span th:text="${expert.introduction}"></span> </h3>
+    <h3>Phí khám bệnh:<span th:text="${expert.fee}"></span> </h3>
+    <h2>Thông tin liên hệ:</h2>
+    <h3>Số điện thoại:<span th:text="${expert.phone}"></span> </h3>
+    <h3>Email:<span th:text="${expert.email}"></span> </h3>
+</div>
+<h2>Sửa thông tin:</h2>
+<a th:href="@{'/expert/edit?id='+${expert_id}}">Sửa thông tin</a>
+</body>
+</html>

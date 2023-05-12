@@ -27,6 +27,6 @@ public interface MeetingRepo extends JpaRepository<Meeting, Integer> {
     ArrayList<Meeting> findAllByDateAfterAndStudentId(@Param("x") String date, @Param("y") int student_id);
 
 
-    @Query(value="select * from Meeting m where m.date=:x and m.time_end<:y", nativeQuery=true)
-    ArrayList<Meeting> findAllMeetingBefore(@Param("x") String current_date, @Param("y") String current_time);
+    @Query(value="select * from Meeting m where m.date< :x", nativeQuery=true)
+    ArrayList<Meeting> findAllMeetingBefore(@Param("x") String current_date);
 }
