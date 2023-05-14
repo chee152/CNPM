@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sign up</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous"
+          th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet">
+    <link th:href="@{/style/login-style.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}" rel="shortcut icon">
+    <link rel="stylesheet" href="../static/style/login-style.css">
 </head>
 <body>
-  <form th:action="@{/signup}" method="POST">
-    <div>
-      <h1>Username:</h1>
-      <input type="text" name="username" placeholder="Username" required>
+<header>
+    <div class="container">
+        <img class="header-logo" th:src="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+        <h2 class="header-text">UET MENTAL CONSULTATION </h2>
     </div>
-    <div>
-      <h1>Bạn là:</h1>
-    <select name="role" required>
-      <option value="1">Sinh viên</option>
-      <option value="2">Chuyên gia tâm lý</option>
-      <option value="3">Giảng viên</option>
-    </select>
+</header>
+<div class="body-wrapper">
+    <div class="container">
+        <div class="body-left">
+            <!--      todo  thay ảnh khác -->
+            <img class="left-img-signup"
+                 th:src="@{https://img.freepik.com/premium-vector/human-brain-with-flowers-white-background-mental-health-cartoon-design_530689-1570.jpg}">
+
+        </div>
+        <div class="body-right">
+            <h2 class="body-header-signup">Tạo tài khoản mới</h2>
+            <form th:action="@{/signup}" method="POST">
+                <div >
+                    <input class="signup username" type="text" name="username" placeholder="Username" required>
+                </div>
+                <div >
+                    <select class="signup role" name="role" required>
+                        <option value="">-Vai trò-</option>
+                        <option value="1">Sinh viên</option>
+                        <option value="2">Chuyên gia tâm lý</option>
+                        <option value="3">Giảng viên</option>
+                    </select>
+                </div>
+                <div class = "password">
+                    <input class = "signup password" type="password" name="password" placeholder="Password" required>
+                    <input class = "signup re-password" type="password" name="reenterpassword" placeholder="Re-enter Password" required>
+                    <button class="Submit-btn" type="submit">Submit</button>
+                    <h1 th:text="${msg1}" style="color: red"></h1>
+                    <h1 th:text="${msg2}" style="color: red"></h1>
+                </div>
+            </form>
+        </div>
     </div>
-    <div>
-      <h1>Password:</h1>
-      <input type="password" name="password" placeholder="Password" required>
-      <h1>Re-enter password</h1>
-      <input type="password" name="reenterpassword" placeholder="Re-enter Password" required> <br>
-      <button type="submit">Submit</button>
-      <h1 th:text="${msg1}" style="color: red"></h1>
-      <h1 th:text="${msg2}" style="color: red"></h1>
-    </div>
-  </form>
+</div>
+
 </body>
 </html>
