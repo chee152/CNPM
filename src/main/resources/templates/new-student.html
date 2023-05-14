@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>New Student</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/style/new-signup.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/style/responsive.css}" type="text/css">
+    <link rel="shortcut icon" th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+    <link href="../static/style/new-signup.css" rel="stylesheet">
 </head>
 <body>
-    <form th:action="@{/student/new}" method="POST">
-        <div>
-            <h1>User Id:</h1>
-            <input type="number" name="user_id" th:value="${user_id}" readonly>
+<header>
+    <div class="container">
+        <div class="header-left">
+            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
         </div>
-        <div>
-            <h1>Họ và tên:</h1>
-            <input type="text" name="name" required>
+        <div class="header-right">
+            <div class="nav-container">
+                <a href="/html/">Link</a>
+                <a href="/css/">Link</a>
+                <a href="/js/">Link</a>
+                <a href="/python/">Link</a>
+            </div>
         </div>
-        <div>
-            <h1>Mã sinh viên:</h1>
-            <input type="number" name="student_id" required>
-        </div>
-        <div>
-            <h1>Tuổi:</h1>
-            <input type="number" name="age" required>
-        </div>
-        <div>
-            <h1>Lớp:</h1>
-            <input type="text" name="department" required>
-        </div>
-        <div>
-            <h1>Địa chỉ:</h1>
-            <input type="text" name="address" required>
-        </div>
-        <div>
-            <h1>Email:</h1>
-            <input type="text" name="email" required>
-        </div>
-        <div>
-            <h1>Số điện thoại:</h1>
-            <input type="number" name="phone" required>
-        </div>
-        <button type="submit">Đăng ký</button>
-    </form>
+    </div>
+</header>
+<div class="body-wrapper">
+    <div class="container">
+        <form method="POST" th:action="@{/student/new}">
+            <div class="form-input">
+                <h1>Đăng kí học sinh mới</h1>
+                <h2>User Id:<span th:text="${user_id}"></span></h2>
+<!--                todo check xem có lỗi không -->
+<!--                todo them link-->
+<!--                <input name="user_id" readonly th:value="${user_id}" type="number">-->
+                <input name="name" placeholder="Họ và tên:" required  type="text"><br>
+                <input name="student_id" placeholder="Mã sinh viên:" required type="number"><br>
+                <input name="age" placeholder="Tuổi:" required type="number"><br>
+                <input name="department" placeholder="Lớp" required type="text"><br>
+                <input name="address" placeholder="Địa chỉ" required type="text"><br>
+                <input name="email" placeholder="Email" required type="text"><br>
+                <input name="phone" placeholder="Số điện thoại" required type="number"><br>
+            </div>
+            <button class="Submit-btn" type="submit">Đăng ký</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+        <h3>LIÊN HỆ:</h3>
+        <p> Trường Đại học Công nghệ - ĐHQGHN
+        </p>
+        <p>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p>Điện thoại: 024.37547.461</p>
+        <p>Fax: 024.37547.460</p>
+        <p>Email: uet@vnu.edu.vn</p>
+    </div>
+</footer>
 </body>
 </html>

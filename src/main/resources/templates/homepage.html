@@ -1,4 +1,4 @@
-<!--vjkxckjhvkjzhkjhjkvc-->
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,8 +12,6 @@
     <link th:href="@{/style/responsive.css}" rel="stylesheet" type="text/css">
     <link th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}" rel="shortcut icon">
     <link rel="stylesheet" href="../static/style/stylesheet.css">
-
-
 </head>
 <body>
 <header>
@@ -21,15 +19,19 @@
         <div class="header-left">
             <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
             <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <div class="nav-container">
+                <a href="/html/">Link</a>
+                <a href="/css/">Link</a>
+                <a href="/js/">Link</a>
+                <a href="/python/">Link</a>
+            </div>
         </div>
-        <span class="fa fa-bars menu-icon"></span>
         <div class="header-right">
-            <p>Xin chào <span th:text="${username}"></span></p>
 
+            <p>Xin chào <span th:text="${username}"></span></p>
         </div>
     </div>
 </header>
-
 <div class="top-wrapper">
     <div class="container">
         <h1>UET MENTAL<br> CONSULTATION</h1>

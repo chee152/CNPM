@@ -4,7 +4,6 @@
 
 body {
     margin: 0;
-    font-family: "Lucida Grande";
 }
 
 a {
@@ -16,15 +15,85 @@ a {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1382px;
     padding: 0 15px;
-    margin: 0 auto;
+    margin: 10px auto;
+}
+div{
+    display: block;
+}
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 65px;
+    margin-top: 0px;
+    float: left;
+}
+
+.header-left-text {
+    margin-top: 6px;
+    padding-left: 10px;
+    width: 200px;
+    height: 65px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;
+    color: rgba(0, 53, 107, 0.8);
+    mix-blend-mode: normal;
+    float: left;
+}
+
+.header-left {
+    float: left;
+}
+
+.nav-container{
+    margin-right: 30px;
+    float :left;
+    display: inline-block;
+}
+.nav-container a {
+    font-size: 20px;
+
+    text-decoration: auto;
+    /*text-align: center;*/
+    line-height: 65px;
+    padding: 0 25px;
+    color: #133a60;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.nav-container a:hover {
+    background-color: #e0dbdb;
+}
+
+.header-right {
+    float: right;
+    margin-right: -25px;
+    font-size: 21px;
+    color: #133a60;
+}
+.header-right p{
+    display: inline-block;
+    margin-right: -25px;
+    font-size: 21px;
+
 }
 
 .top-wrapper {
-    margin-top: 65px;
     padding: 180px 0 100px 0;
-    background-image:url(Baner.png);
+    background-image: url(Baner.png);
     background-size: cover;
     color: white;
     text-align: center;
@@ -34,14 +103,11 @@ a {
 
 
     text-align: left;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 45px;
     line-height: 54px;
-
     color: #FFFFFF;
-
     mix-blend-mode: normal;
 }
 
@@ -51,7 +117,6 @@ a {
     height: 150px;
     left: 82px;
     top: 575px;
-    font-family: 'Inter';
     font-style: italic;
     font-weight: 400;
     font-size: 23px;
@@ -60,88 +125,13 @@ a {
     color: rgba(255, 255, 255);
 }
 
-.btn_signup {
-    background-color: #239b76;
-    font-size: 20px;
-    padding: 12px 24px;
-    color: white;
-    display: inline-block;
-    opacity: 0.8;
-    border-radius: 10px;
-    text-align: right;
-}
 
-.btn_signup:hover {
-    opacity: 1;
-}
 
 .fa {
     margin-right: 5px;
 }
 
-header {
-    height: 65px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    position :fixed;
-    top: 0;
-    z-index: 10;
-}
 
-.logo {
-    width: 65px;
-    margin-top: 0px;
-    float:left;
-}
-.header-left-text{
-    margin-top: 6px;
-    padding-left: 80px;
-    width: 285px;
-    height: 0px;
-
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 30px;
-
-    color: rgba(0, 53, 107, 0.8);
-
-    mix-blend-mode: normal;
-}
-
-.header-left {
-    float: left;
-}
-
-.header-right {
-    float: right;
-    margin-right: -25px;
-    font-size: 21px;
-
-}
-
-.header-right a {
-    line-height: 65px;
-    padding: 0 25px;
-    color: #527760;
-    display: block;
-    float: left;
-    transition: all 0.5s;
-}
-
-.header-right a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.menu-icon{
-    color: white;
-    float: right;
-    font-size: 25px;
-    padding: 21px 0;
-    display: none;
-}
 
 .intro1-wrapper {
     margin-top: 100px;
@@ -184,17 +174,21 @@ header {
     background-color: rgba(255, 255, 255, 0);
 
 }
-.intro2-left{
-    float:left
+
+.intro2-left {
+    float: left
 }
-.intro2-right{
-    padding-top:60px;
+
+.intro2-right {
+    padding-top: 60px;
     text-align: center;
 }
-.intro2-right h1{
+
+.intro2-right h1 {
     color: #339f48;
 }
-.intro2-right p{
+
+.intro2-right p {
     text-align: justify;
     font-size: 20px;
 
@@ -208,11 +202,13 @@ header {
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
 }
-.expert-heading{
+
+.expert-heading {
     font-weight: bolder;
     font-size: 20px;
     color: #339f48;
 }
+
 .expert {
     float: left;
     width: 25%;
@@ -221,9 +217,10 @@ header {
 .expert-image {
     position: relative;
 }
+
 .expert-image img {
-    width:180px;
-    height :180px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
 }
 
@@ -241,6 +238,7 @@ header {
     letter-spacing: 1px;
     color: #339f48;
 }
+
 .message-heading h3 {
     font-weight: normal;
     font-size: 23px;
@@ -250,27 +248,31 @@ header {
     margin-top: 65px;
     padding-bottom: 50px;
     background-image: url(4.png);
-    background-size:cover ;
+    background-size: cover;
     color: white;
     text-align: center;
 }
-.message-left{
+
+.message-left {
     padding-top: 50px;
     text-align: left;
     width: 50%;
 }
-.message-form{
+
+.message-form {
     display: block;
-    font-size:40px;
+    font-size: 40px;
     box-sizing: border-box;
     line-height: 0;
 
 }
-.message-form input{
+
+.message-form input {
     padding: 20px;
     border-radius: 5%;
 }
-.message-form textarea{
+
+.message-form textarea {
     padding: 20px;
     resize: none;
     border-radius: 5%;
@@ -280,7 +282,7 @@ header {
 .message {
     padding: 15px 40px;
     background-color: #5dca88;
-    color:white;
+    color: white;
     cursor: pointer;
     box-shadow: 0 7px #1a7940;
     font-size: 20px;
@@ -301,15 +303,16 @@ footer img {
 
 }
 
-footer h3{
+footer h3 {
     padding-left: 130px;
     text-align: left;
 }
+
 footer p {
     display: block;
     color: rgb(0, 0, 0);
     font-size: 15px;
-    line-height:1px;
+    line-height: 1px;
     text-space: 13px;
     margin-left: 130px;
     text-align: left;
