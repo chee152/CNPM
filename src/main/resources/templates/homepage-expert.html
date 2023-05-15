@@ -1,13 +1,158 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Expert site</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet">
+    <link th:href="@{/style/stylesheet.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/style/responsive.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}" rel="shortcut icon">
+    <link rel="stylesheet" href="../static/style/stylesheet.css">
 </head>
 <body>
-<div>
-    <p>Xin chào <span th:text="${username}"></span></p>
+<header>
+    <div class="container">
+        <div class="header-left">
+            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <div class="nav-container">
+                <a href="/html/">Link</a>
+                <a href="/css/">Link</a>
+                <a href="/js/">Link</a>
+                <a href="/python/">Link</a>
+            </div>
+        </div>
+        <div class="header-right">
 
+            <p>Xin chào <span th:text="${username}"></span></p>
+        </div>
+    </div>
+</header>
+<div class="top-wrapper">
+    <div class="container">
+        <h1>UET MENTAL<br> CONSULTATION</h1>
+
+        <p>Bằng tâm huyết của mình, chúng tôi hi vọng sẽ cùng chung tay giúp đỡ được nhiều cá nhân, gia đình vượt qua đươc
+            những khó khăn, vướng mắc trong cuộc sống!<br>Chúng tôi luôn luôn sẵn sàng lắng nghe và sẻ chia!</p>
+    </div>
 </div>
+
+<div class="intro1-wrapper">
+    <div class="container">
+        <div class="intros">
+            <div class="intro">
+                <div class="intro-icon">
+                    <img src="https://mindcare.vn/wp-content/uploads/2020/04/nghien-cuu-phat-trien.png">
+                </div>
+                <p class="text-contents">Chuyên gia của UET là những nhà tâm lý có trình độ cử nhân, thạc sĩ, tiến sĩ…có nhiều
+                    năm kinh nghiệm trong lĩnh vực, luôn tận tuỵ, yêu nghề và giàu tình yêu thương, sẵn sàng lắng nghe và thấu
+                    cảm.</p>
+            </div>
+            <div class="intro">
+                <div class="intro-icon">
+                    <img src="https://mindcare.vn/wp-content/uploads/2020/04/tham-van-va-tri-lieu.png">
+
+                </div>
+                <p class="text-contents">Chúng tôi thực hiện tham vấn tâm lý trực tiếp, trực tuyến cho các nhân sinh viên đang
+                    gặp những khó khăn, vướng mắc cần tháo gỡ.</p>
+            </div>
+            <div class="intro">
+                <div class="intro-icon">
+                    <img src="https://mindcare.vn/wp-content/uploads/2020/04/dao-tao-tam-ly-hoc.png">
+
+                </div>
+                <p class="text-contents">Cùng sinh viên kết nối với gia đình trong quá trình tham vấn nếu cần thiết, đồng hành
+                    cùng sinh viên trên con đường chữa lành .</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="intro2-wrapper">
+    <div class="container">
+        <div class="intro2-left">
+            <img class="intro2-image" src="https://mindcare.vn/wp-content/uploads/2020/04/loi-gioi-thieu-img.jpg">
+        </div>
+        <div class="intro2-right">
+            <h1>Sứ mệnh vì sức khỏe tinh thần của sinh viên</h1>
+            <p>Đội ngũ có chung một niềm khát khao mãnh liệt mong muốn giúp cho mọi người trân quý sức khoẻ tinh thần của
+                chính mình và những người thân xung quanh.
+                <br><br>Hãy sẻ chia với chúng tôi bất kỳ khi nào bạn cần, chúng tôi luôn sẵn lòng lắng nghe bạn!</p>
+        </div>
+    </div>
+</div>
+<div class="expert-wrapper">
+    <div class="container">
+        <div class="expert-heading">
+            <h2>Đội ngũ chuyên gia tại UET</h2>
+        </div>
+        <div class="experts">
+            <div class="expert">
+                <div class="expert-image">
+                    <img src="https://mindcare.vn/wp-content/uploads/2021/06/Duy-Le-profile-photo-1.png">
+                    <h2>Họ và tên</h2>
+                    <h3>Chức vụ</h3>
+                </div>
+                <div class="expert-contents">
+                    <p>Giới thiệu chung</p>;
+                </div>
+            </div>
+        </div>
+        <div class="experts">
+            <div class="expert">
+                <div class="expert-image">
+                    <img src="https://mindcare.vn/wp-content/uploads/2021/06/Duy-Le-profile-photo-1.png">
+                    <h2>Họ và tên</h2>
+                    <h3>Chức vụ</h3>
+                </div>
+                <div class="expert-contents">
+                    <p> </p>;
+                </div>
+            </div>
+        </div>
+        <div class="experts">
+            <div class="expert">
+                <div class="expert-image">
+                    <img src="https://mindcare.vn/wp-content/uploads/2021/06/Duy-Le-profile-photo-1.png">
+                    <h2>Họ và tên</h2>
+                    <h3>Chức vụ</h3>
+                </div>
+                <div class="expert-contents">
+                    <p>Giới thiệu chung</p>;
+                </div>
+            </div>
+        </div>
+        <div class="experts">
+            <div class="expert">
+                <div class="expert-image">
+                    <img src="https://mindcare.vn/wp-content/uploads/2021/06/Duy-Le-profile-photo-1.png">
+                    <h2>Họ và tên</h2>
+                    <h3>Chức vụ</h3>
+                </div>
+                <div class="expert-contents">
+                    <p>Giới thiệu chung</p>;
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+        <h3>LIÊN HỆ:</h3>
+        <p> Trường Đại học Công nghệ - ĐHQGHN
+        </p>
+        <p>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p>Điện thoại: 024.37547.461</p>
+        <p>Fax: 024.37547.460</p>
+        <p>Email: uet@vnu.edu.vn</p>
+    </div>
+</footer>
 </body>
 </html>
