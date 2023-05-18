@@ -36,9 +36,7 @@
         <form method="post" th:action="@{/expert/new}">
             <div class="form-input">
                 <h1>Đăng kí chuyên gia tâm lí</h1>
-                <h2>User Id:<span th:text="${user_id}"></span></h2>
-                <!--            <input type="number" name="user_id" th:value="${user_id}" readonly>-->
-
+                <input type="number" name="user_id" th:value="${user_id}" hidden>
                 <input name="name" placeholder="Họ và tên:" required type="text">
                 <input name="age" placeholder="Tuổi:" required type="number">
                 <input name="works_at" placeholder="Nơi làm việc" required type="text">

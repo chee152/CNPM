@@ -19,7 +19,12 @@ public class StudentController {
     @Autowired
     StudentService studentService;
     @PostMapping("/student/new")
-    public String createStudent(@ModelAttribute Student student){
+    public String createStudent(@ModelAttribute Student student, Model model){
+        if(studentService.searchByStudentId(student.getStudent_id())!=null){
+            String msg= "Mã sinh viên đã tồn tại";
+            model.addAttribute("msg", msg);
+            return "new-student.html";
+        }
        studentService.create(student);
        return "redirect:/login";
     }
@@ -40,6 +45,6 @@ public class StudentController {
     @PostMapping("/student/edit")
     public String editExpert(@ModelAttribute("student") Student student){
         studentService.update(student);
-        return "redirect:/expert/profile";
+        return "redirect:/student/profile";
     }
 }

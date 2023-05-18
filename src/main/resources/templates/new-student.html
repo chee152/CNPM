@@ -32,13 +32,10 @@
 </header>
 <div class="body-wrapper">
     <div class="container">
-        <form method="POST" th:action="@{/student/new}">
+        <form method="post" th:action="@{/student/new}">
             <div class="form-input">
                 <h1>Đăng kí học sinh mới</h1>
-                <h2>User Id:<span th:text="${user_id}"></span></h2>
-<!--                todo check xem có lỗi không -->
-<!--                todo them link-->
-<!--                <input name="user_id" readonly th:value="${user_id}" type="number">-->
+                <input name="user_id" hidden th:value="${user_id}" type="number">
                 <input name="name" placeholder="Họ và tên:" required  type="text"><br>
                 <input name="student_id" placeholder="Mã sinh viên:" required type="number"><br>
                 <input name="age" placeholder="Tuổi:" required type="number"><br>
@@ -48,6 +45,7 @@
                 <input name="phone" placeholder="Số điện thoại" required type="number"><br>
             </div>
             <button class="Submit-btn" type="submit">Đăng ký</button>
+            <p th:text="${msg}"></p>
         </form>
     </div>
 </div>

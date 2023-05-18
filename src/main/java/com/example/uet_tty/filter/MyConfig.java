@@ -13,7 +13,8 @@ public class MyConfig {
                 = new FilterRegistrationBean<>();
 
         registrationBean.setFilter(new Filter());
-        registrationBean.addUrlPatterns("/expert/*","/student/*","/homepage","/freetime/*","/meeting/*","/");
+        registrationBean.addUrlPatterns("/expert/profile","/expert/edit","/student/profile","/student/edit","/homepage","/freetime/*","/meeting/*");
+
 
         return registrationBean;
     }

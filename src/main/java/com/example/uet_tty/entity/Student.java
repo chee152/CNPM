@@ -2,7 +2,6 @@ package com.example.uet_tty.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
