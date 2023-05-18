@@ -296,12 +296,13 @@ footer img {
 footer h3 {
     padding-left: 130px;
     text-align: left;
+    color: rgb(243, 243, 243);
 }
 
 footer p {
     display: block;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
+    color: rgb(243, 243, 243);
+    font-size: 18px;
     line-height: 1px;
     text-space: 13px;
     margin-left: 130px;
@@ -309,7 +310,7 @@ footer p {
 }
 
 footer {
-
+    background-color: rgba(0, 54, 104, 0.7);
     padding-top: 30px;
     padding-bottom: 20px;
 }
