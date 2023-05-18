@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: left;
+}
+
+.container {
+    max-width: 1382px;
+    padding: 0 15px;
+    margin: 10px auto;
+}
+
+div {
+    display: block;
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 65px;
+    margin-top: 0px;
+    float: left;
+}
+
+.header-left-text {
+    margin-top: 6px;
+    padding-left: 10px;
+    width: 200px;
+    height: 65px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 30px;
+    color: rgba(0, 53, 107, 0.8);
+    mix-blend-mode: normal;
+    float: left;
+}
+
+.header-left {
+    float: left;
+}
+
+.nav-container {
+    margin-right: 30px;
+    float: left;
+    display: inline-block;
+}
+
+.nav-container a {
+    font-size: 20px;
+
+    text-decoration: auto;
+    /*text-align: center;*/
+    line-height: 65px;
+    padding: 0 25px;
+    color: #133a60;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+.nav-container a:hover {
+    background-color: #e0dbdb;
+}
+
+.header-right {
+    float: right;
+    margin-right: -25px;
+    font-size: 21px;
+    color: #133a60;
+}
+
+.header-right p {
+    display: inline-block;
+    margin-right: -25px;
+    font-size: 21px;
+
+}
+
+
+footer img {
+    padding-top: 8px;
+    width: 110px;
+    float: left;
+
+
+}
+
+.header-bar {
+    background: linear-gradient(to left, rgb(42, 253, 237), rgba(72, 188, 183, 0.93));
+}
+
+.bar {
+    padding: 20px 20px;
+    font-size: 25px;
+    color: rgb(243, 243, 243);
+}
+.input-wrapper{
+    text-align: center;
+}
+.form-input{
+    width: 700px;
+    margin: auto;
+}
+.form-input input {
+    margin: 10px ;
+    width: 80%;
+    padding: 18px ;
+    font-size: 15px;
+}
+
+
+
+.form-input h2{
+    margin: auto;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 80px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 30px;
+}
+.Submit-btn {
+    margin-bottom: 50px;
+    background: rgb(38, 217, 196);
+    width: 20%;
+    padding: 15px;
+    font-size: 22px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0 5px rgb(24, 168, 113);
+    opacity: 0.95;
+}
+
+.Submit-btn:hover {
+    opacity: 1;
+    background-color: rgb(32, 199, 168);
+
+}
+
+.Submit-btn:active {
+    background-color: rgb(33, 164, 211);
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+footer h3 {
+    padding-left: 130px;
+    text-align: left;
+    color: rgb(243, 243, 243);
+    font-family: "Fira Code Light", serif;
+}
+
+footer p {
+    display: block;
+    color: rgb(243, 243, 243);
+    font-size: 15px;
+    line-height: 1px;
+    text-space: 13px;
+    margin-left: 130px;
+    text-align: left;
+}
+
+footer {
+    background: linear-gradient(to left, rgb(38, 241, 226), rgba(72, 188, 183, 0.93));
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
