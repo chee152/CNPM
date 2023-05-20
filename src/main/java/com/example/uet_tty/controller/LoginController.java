@@ -1,7 +1,9 @@
 package com.example.uet_tty.controller;
 
 import com.example.uet_tty.entity.User;
+import com.example.uet_tty.service.ExpertService;
 import com.example.uet_tty.service.LoginService;
+import com.example.uet_tty.service.StudentService;
 import com.example.uet_tty.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,13 @@ public class LoginController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    StudentService studentService;
+
+    @Autowired
+    ExpertService expertService;
+
     @GetMapping("/login")
     public String login(){
         return "login-page.html";
@@ -45,8 +54,10 @@ public class LoginController {
     public String homepage(HttpSession session, Model model){
         model.addAttribute("username",session.getAttribute("user_name"));
         if(userService.findByUsername((String) session.getAttribute("user_name")).getRole()==1) {
+            model.addAttribute("id", studentService.searchByUserId((int) session.getAttribute("user_id")).getStudent_id());
             return "homepage.html";
         }else {
+            model.addAttribute("id", expertService.getIdByUserId ((int) session.getAttribute("user_id")));
             return "homepage-expert.html";
         }
     }

@@ -36,8 +36,10 @@ public class StudentController {
         return "student-profile.html";
     }
     @GetMapping("/student/edit")
-    public String editStudent(Model model, @RequestParam("id")int id){
-        Student student = studentService.searchByStudentId(id);
+
+    public String editStudent(Model model, HttpSession session){
+
+        Student student = studentService.searchByUserId((Integer) session.getAttribute("user_id"));
         model.addAttribute("student", student);
         return "student-edit.html";
     }

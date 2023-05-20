@@ -29,8 +29,8 @@ public class ExpertController {
         return "expert-profile.html";
     }
     @GetMapping("/expert/edit")
-    public String editExpert(Model model, @RequestParam("id")int id){
-        Expert expert = expertService.getByExpertId(id);
+    public String editExpert(Model model, HttpSession session){
+        Expert expert = expertService.getByUserId((Integer) session.getAttribute("user_id"));
         model.addAttribute("expert", expert);
         return "expert-edit.html";
     }
