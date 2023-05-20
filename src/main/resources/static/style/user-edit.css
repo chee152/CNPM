@@ -113,23 +113,26 @@ footer img {
     font-size: 25px;
     color: rgb(243, 243, 243);
 }
-.input-wrapper{
+
+.input-wrapper {
     text-align: center;
+    min-height: 460px;
 }
-.form-input{
+
+.form-input {
     width: 700px;
     margin: auto;
 }
+
 .form-input input {
-    margin: 10px ;
+    margin: 10px;
     width: 80%;
-    padding: 18px ;
+    padding: 18px;
     font-size: 15px;
 }
 
 
-
-.form-input h2{
+.form-input h2 {
     margin: auto;
     padding-top: 20px;
     text-align: left;
@@ -137,6 +140,7 @@ footer img {
     color: rgba(0, 0, 0, 0.55);
     font-size: 30px;
 }
+
 .Submit-btn {
     margin-bottom: 50px;
     background: rgb(38, 217, 196);
@@ -185,7 +189,14 @@ footer {
     background: linear-gradient(to left, rgb(38, 241, 226), rgba(72, 188, 183, 0.93));
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+/*
+.short-footer {
+    background: linear-gradient(to left, rgb(38, 241, 226), rgba(72, 188, 183, 0.93));
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: fixed;
     bottom: 0;
     width: 100%;
-
-}
+}*/

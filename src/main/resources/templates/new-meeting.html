@@ -20,15 +20,16 @@
             <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
             <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
             <div class="nav-container">
-                <a href="/html/">Link</a>
-                <a href="/css/">Link</a>
-                <a href="/js/">Link</a>
-                <a href="/python/">Link</a>
+                <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
+                <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
+                <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
+                <a th:href="@{/logout}">Logout</a>
+                <a th:href="@{/student/edit}">Sửa thông tin</a>
             </div>
         </div>
         <div class="header-right">
 
-            <p>tên<span th:text="${username}"></span></p>
+            <p>Xin chào <span th:text="${username}"></span></p>
         </div>
     </div>
 </header>
@@ -36,17 +37,20 @@
     <div class="container">
         <h1 class="bar">SỬA THÔNG TIN</h1>
     </div>
-
 </div>
+<div class="input-wrapper">
+    <div class="container">
     <form th:action="@{/meeting/search}" method="GET">
-        <div>
-        <h1>Nhập ngày bạn muốn tìm chuyên gia:</h1>
+        <div class="form-input">
+        <h2>Nhập ngày bạn muốn tìm chuyên gia:</h2>
         <input type="date" th:attr="min=${min}" name="date" placeholder="Nhập ngày">
         </div>
-        <button type="submit">Submit</button>
+        <button class="Submit-btn" type="submit">Submit</button>
     </form>
+        </div>
+
 </div>
-<footer>
+<footer class="short-footer">
     <div class="container">
         <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
         <h3>LIÊN HỆ:</h3>
