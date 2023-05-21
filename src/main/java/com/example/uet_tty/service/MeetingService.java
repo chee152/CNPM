@@ -352,6 +352,7 @@ public class MeetingService {
 
         if (meeting != null) {
             meeting.setNote(note);
+            meetingRepo.save(meeting)
         }
     }
 }
