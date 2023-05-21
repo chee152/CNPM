@@ -47,7 +47,8 @@
         <form method="post" th:action="@{/student/edit}" th:object="${student}">
             <div class="form-input">
                 <h2>Thông tin cá nhân:</h2>
- <input type="hidden" th:field="*{student_id}"
+                <input  th:field="*{student_id}" hidden>
+                <input  th:field="*{user_id}" hidden>
 
                 <input placeholder="Tên" th:field="*{name}">
 

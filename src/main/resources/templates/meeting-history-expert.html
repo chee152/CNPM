@@ -64,7 +64,7 @@
                     <p th:text="${l.student_phone}"></p>
                     <p th:text="${l.student_email}"></p>
                 </td>
-                <td th:text="note"></td>
+                <td th:text="${l.note}"></td>
                 <td th:switch="${l.status}">
                     <span th:case=1>Đang chờ</span>
                     <span th:case=2>Xác nhận</span>
