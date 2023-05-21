@@ -168,6 +168,10 @@ footer img {
     text-align: center;
     min-height: 460px;
 }
+.input-wrapper h1 {
+    text-align: center;
+    color: dimgray;
+}
 .input-wrapper h3{
     margin-left:450px;
     font-size: 20px;
@@ -187,11 +191,11 @@ footer img {
     margin: auto;
 }
 
-.form-input input {
+.form-input input,select, textarea {
     margin: 10px;
     width: 80%;
-    padding: 18px;
-    font-size: 15px;
+    padding: 13px;
+    font-size: 17px;
 }
 
 
@@ -202,6 +206,15 @@ footer img {
     padding-left: 80px;
     color: rgba(0, 0, 0, 0.55);
     font-size: 30px;
+    float: left;
+}
+.form-input span{
+    display: inline;
+    margin:0;
+    font-size: 30px;
+    color: rgba(203, 22, 22, 0.84);
+    text-align: left;
+    padding-left: 10px;
 }
 
 .Submit-btn {

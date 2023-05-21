@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>New Freetime</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/style/user-edit.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/style/responsive.css}" type="text/css">
+    <link rel="shortcut icon" th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+    <link href="../static/style/user-edit.css" rel="stylesheet">
 </head>
-<h1>Thêm thời gian rảnh:</h1>
 <body>
-    <form th:action="@{/freetime/new}" method="POST">
-        <div>
+<header>
+    <div class="container">
+        <div class="header-left">
+            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <div class="nav-container">
+                <a th:href="@{/homepage}">Trang chủ</a>
+                <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
+                <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
+                <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+            <div class="dropdown-content">
+                <a th:href="@{/student/profile}">Thông tin cá nhân</a>
+                <a th:href="@{/student/edit}">Sửa thông tin</a>
+                <a th:href="@{/logout}">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-bar">
+    <div class="container">
+        <h1 class="bar">THÊM LỊCH RẢNH</h1>
+    </div>
 
-            <div>
+</div>
+<div class="input-wrapper">
+    <div class="container">
+    <form th:action="@{/freetime/new}" method="POST">
+        <div class="form-input">
+            <h2>Thêm lịch của bạn:</h2>
             <select name="dow" required>
                 <option value=1>Thứ hai</option>
                 <option value=2>Thứ ba</option>
@@ -19,19 +56,29 @@
                 <option value=6>Thứ bảy</option>
                 <option value=7>Chủ nhật</option>
             </select>
-            </div>
             <div>
-                <h1>Giờ bắt đầu</h1>
+                <h2>Giờ bắt đầu</h2>
                 <input type="time" name="time_start" required>
-                <h1>Giờ nghỉ</h1>
+                <h2>Giờ nghỉ</h2>
                 <input type="time" name="time_end" required>
             </div>
-            <div>
-                <h1>Giờ kết thúc</h1>
-            </div>
-        </div>
-        <button type="submit">Đăng ký</button>
-    </form>
 
+        </div>
+        <button class="Submit-btn" type="submit">Đăng ký</button>
+    </form>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+        <h3>LIÊN HỆ:</h3>
+        <p> Trường Đại học Công nghệ - ĐHQGHN
+        </p>
+        <p>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p>Điện thoại: 024.37547.461</p>
+        <p>Fax: 024.37547.460</p>
+        <p>Email: uet@vnu.edu.vn</p>
+    </div>
+</footer>
 </body>
 </html>

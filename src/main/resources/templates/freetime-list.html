@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Freetime List</title>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+<title>UET Talk To You</title>
+<link crossorigin="anonymous"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{/style/DanhSach.css}" type="text/css">
+<link rel="stylesheet" th:href="@{/style/responsive.css}" type="text/css">
+<link rel="shortcut icon" th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+<link href="../static/style/DanhSach.css" rel="stylesheet">
 </head>
 <body>
-<h1>Lịch rảnh của chuyên gia</h1>
-<a th:href="@{/freetime/new}">Thêm lịch rảnh</a>
-  <table class="show-table">
-    <tr>
-      <th>Thứ</th>
-      <th>Thời gian bắt đầu</th>
-      <th>Thời gian kết thúc</th>
-      <th>Thao tác</th>
-    </tr>
-    <tr th:each="l:${freetime_list}">
-      <td th:switch="${l.dow}">
-        <span th:case=1>Thứ hai</span>
-        <span th:case=2>Thứ ba</span>
-        <span th:case=3>Thứ tư</span>
-        <span th:case=4>Thứ năm</span>
-        <span th:case=5>Thứ sáu</span>
-        <span th:case=6>Thứ bảy</span>
-        <span th:case=7>Chủ nhật</span>
+<header>
+    <div class="container">
+        <div class="header-left">
+            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <div class="nav-container">
+                <a th:href="@{/homepage}">Trang chủ</a>
+                <a th:href="@{/meeting/expert/incoming}">Lịch hẹn sắp tới</a>
+                <a th:href="@{/meeting/expert/history}">Lịch sử</a>
+                <a th:href="@{/freetime/list}">Thời gian rảnh</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+            <div class="dropdown-content">
+                <a th:href="@{/expert/profile}">Thông tin cá nhân</a>
+                <a th:href="@{/expert/edit}">Sửa thông tin</a>
+                <a th:href="@{/logout}">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-bar">
+    <div class="container">
+        <h1 class="bar">Danh sách lịch rảnh</h1>
+    </div>
+</div>
+<div class="input-wrapper">
+    <div class="container">
 
-      </td>
-      <td th:text="${l.time_start}"></td>
-      <td th:text="${l.time_end}"></td>
-      <td>
-        <a th:href="@{'/freetime/delete?id='+${l.freetime_id}}">Xóa</a>
-      </td>
-    </tr>
-  </table>
+        <h1>Lịch rảnh của chuyên gia</h1>
+<!--        todo them nốt bấm-->
+        <a th:href="@{/freetime/new}">Thêm lịch rảnh</a>
+        <table class="show-table">
+            <tr>
+                <th>Thứ</th>
+                <th>Thời gian bắt đầu</th>
+                <th>Thời gian kết thúc</th>
+                <th>Thao tác</th>
+            </tr>
+            <tr th:each="l:${freetime_list}">
+                <td th:switch="${l.dow}">
+                    <span th:case=1>Thứ hai</span>
+                    <span th:case=2>Thứ ba</span>
+                    <span th:case=3>Thứ tư</span>
+                    <span th:case=4>Thứ năm</span>
+                    <span th:case=5>Thứ sáu</span>
+                    <span th:case=6>Thứ bảy</span>
+                    <span th:case=7>Chủ nhật</span>
+
+                </td>
+                <td th:text="${l.time_start}"></td>
+                <td th:text="${l.time_end}"></td>
+                <td>
+                    <a th:href="@{'/freetime/delete?id='+${l.freetime_id}}">Xóa</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+        <h3>LIÊN HỆ:</h3>
+        <p> Trường Đại học Công nghệ - ĐHQGHN
+        </p>
+        <p>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p>Điện thoại: 024.37547.461</p>
+        <p>Fax: 024.37547.460</p>
+        <p>Email: uet@vnu.edu.vn</p>
+    </div>
+</footer>
 </body>
 </html>

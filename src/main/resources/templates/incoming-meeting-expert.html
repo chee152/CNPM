@@ -38,7 +38,7 @@
 </header>
 <div class="header-bar">
     <div class="container">
-        <h1 class="bar">Lịch hẹn sắp tới</h1>
+        <h1 class="bar">LỊCH HẸN SẮP TỚI</h1>
     </div>
 </div>
 <div class="input-wrapper">
@@ -53,7 +53,7 @@
                 <th>Thời gian bắt đầu</th>
                 <th>Ghi chú</th>
                 <th>Trạng thái</th>
-                <th>Thao tác</th>
+                <th colspan="2">Thao tác</th>
                 <!--        Chấp nhận 2, từ chối 3, -->
             </tr>
             </thead>
@@ -75,8 +75,8 @@
                     <span th:case=4>Hoàn thành</span>
                 </td>
                 <td>
-                    <a th:href="@{'/meeting/expert/accept?id='+${l.meeting_id}}">Chấp nhận</a></td>
-                    <td><a th:href="@{'/meeting/expert/cancel?id='+${l.meeting_id}}">Từ chối</a>
+                    <a class="Submit-btn" th:href="@{'/meeting/expert/accept?id='+${l.meeting_id}}">Chấp nhận</a></td>
+                    <td><a  class="Submit-btn" th:href="@{'/meeting/expert/cancel?id='+${l.meeting_id}}">Từ chối</a>
                 </td>
             </tr>
             </tbody>

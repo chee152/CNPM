@@ -39,7 +39,7 @@
 
 <div class="header-bar">
     <div class="container">
-        <h1 class="bar">Đánh giá chuyên gia</h1>
+        <h1 class="bar">ĐÁNH GIÁ CHUYÊN GIA</h1>
     </div>
 </div>
 <div class="input-wrapper">
@@ -47,10 +47,11 @@
 
         <form method="post" th:action="@{/rating}">
             <div class="form-input">
-                <h2>Chuyên gia:<span th:text="${expert_name}"></span></h2>
-                <label>Mức độ hài lòng:</label>
+                <h2>Chuyên gia: <span th:text="${expert_name}"></span></h2>
+                <br>
                 <input hidden name="expert_id" th:value="${expert_id}">
                 <select name="score" required>
+                    <option value="">-Hãy chọn đánh giá của bạn-</option>
                     <option value=1>Rất không hài lòng</option>
                     <option value=2>Không hài lòng</option>
                     <option value=3>Tạm ổn</option>
@@ -58,8 +59,7 @@
                     <option value=5>Rất hài lòng</option>
                 </select>
                 <br>
-                <label>Để lại bình luận</label>
-                <textarea name="message" type="text"></textarea>
+                <textarea placeholder="Để lại bình luận" name="message" type="text"></textarea>
             </div>
 
             <button class="Submit-btn" type="Submit-btn">Xác nhận</button>
