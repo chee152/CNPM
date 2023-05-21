@@ -20,17 +20,20 @@
             <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
             <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
             <div class="nav-container">
+                <a th:href="@{/homepage}">Trang chủ</a>
                 <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
                 <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
                 <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
-                <a th:href="@{/logout}">Logout</a>
-                <a th:href="@{/student/edit}">Sửa thông tin</a>
             </div>
         </div>
         <div class="header-right">
-
-            <p>Xin chào <span th:text="${username}"></span></p>
+            <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+                <div class="dropdown-content">
+                    <a th:href="@{/student/profile}">Thông tin cá nhân</a>
+                    <a th:href="@{/student/edit}">Sửa thông tin</a>
+                    <a th:href="@{/logout}">Đăng xuất</a>
         </div>
+    </div>
     </div>
 </header>
 <div class="top-wrapper">

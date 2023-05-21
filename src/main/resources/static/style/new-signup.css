@@ -78,20 +78,22 @@ header {
 }
 
 .nav-container a:hover {
-    background-color: #e0dbdb;
+    background-color: #3ecebd;
+    color: white;
+    font-weight: bold;
+    padding: 0px 20px;
 }
 
 .header-right {
     float: right;
-    margin-right: -25px;
-    font-size: 21px;
+    font-size: 20px;
     color: #133a60;
 }
 
 .header-right p {
     display: inline-block;
     margin-right: -25px;
-    font-size: 21px;
+    font-size: 20px;
 
 }
 

@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
+    <title>UET Talk To You</title>
+    <link crossorigin="anonymous"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/style/user-edit.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/style/responsive.css}" type="text/css">
+    <link rel="shortcut icon" th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
+    <link href="../static/style/user-edit.css" rel="stylesheet">
 </head>
 <body>
-<h1>Thông tin chuyên gia</h1>
-<div>
-    <h3>Tên:<span th:text="${expert.name}"></span> </h3>
-    <h3>Tuổi:<span th:text="${expert.age}"></span> </h3>
-    <h3>Nơi làm việc:<span th:text="${expert.works_at}"></span> </h3>
-    <h3>Giới thiệu:<span th:text="${expert.introduction}"></span> </h3>
-    <h3>Phí khám bệnh:<span th:text="${expert.fee}"></span> </h3>
-    <h2>Thông tin liên hệ:</h2>
-    <h3>Số điện thoại:<span th:text="${expert.phone}"></span> </h3>
-    <h3>Email:<span th:text="${expert.email}"></span> </h3>
+<header>
+    <div class="container">
+        <div class="header-left">
+            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <div class="nav-container">
+                <a th:href="@{/homepage}">Trang chủ</a>
+                <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
+                <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
+                <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
+            </div>
+        </div>
+        <div class="header-right">
+            <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+            <div class="dropdown-content">
+                <a th:href="@{/student/profile}">Thông tin cá nhân</a>
+                <a th:href="@{/student/edit}">Sửa thông tin</a>
+                <a th:href="@{/logout}">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-bar">
+    <div class="container">
+        <h1 class="bar">Thông tin chuyên gia</h1>
+    </div>
 </div>
-<h2>Sửa thông tin:</h2>
-<a th:href="@{'/expert/edit?id='+${expert_id}}">Sửa thông tin</a>
+<div class="input-wrapper">
+    <h2>Thông tin cá nhân:</h2>
+    <h3>Tên:<span th:text="${expert.name}"></span></h3>
+    <h3>Tuổi:<span th:text="${expert.age}"></span></h3>
+    <h3>Nơi làm việc:<span th:text="${expert.works_at}"></span></h3>
+    <h3>Giới thiệu:<span th:text="${expert.introduction}"></span></h3>
+    <h3>Phí khám bệnh:<span th:text="${expert.fee}"></span></h3>
+    <h2>Thông tin liên hệ:</h2>
+    <h3>Số điện thoại:<span th:text="${expert.phone}"></span></h3>
+    <h3>Email:<span th:text="${expert.email}"></span></h3>
+
+    <a class="Submit-btn"th:href="@{'/expert/edit?id='+${expert_id}}">Sửa thông tin</a>
+</div>
+<footer>
+    <div class="container">
+        <img src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+        <h3>LIÊN HỆ:</h3>
+        <p> Trường Đại học Công nghệ - ĐHQGHN
+        </p>
+        <p>Địa chỉ: E3, 144 Xuân Thủy, Cầu Giấy, Hà Nội</p>
+        <p>Điện thoại: 024.37547.461</p>
+        <p>Fax: 024.37547.460</p>
+        <p>Email: uet@vnu.edu.vn</p>
+    </div>
+</footer>
 </body>
 </html>
