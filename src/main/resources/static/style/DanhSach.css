@@ -219,6 +219,7 @@ footer img {
     background: rgb(121, 231, 219);
     color: white;
 }
+
 .Submit-btn {
     margin-bottom: 50px;
     background: rgb(38, 217, 196);
@@ -232,7 +233,11 @@ footer img {
     box-shadow: 0 5px rgb(24, 168, 113);
     opacity: 0.95;
 }
-
+.show-table textarea{
+    width: 100%;
+    min-height: 200px;
+    border: none;
+}
 .Submit-btn:hover {
     opacity: 1;
     background-color: rgb(32, 199, 168);

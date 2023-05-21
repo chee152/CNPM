@@ -22,15 +22,15 @@
             <div class="nav-container">
                 <a th:href="@{/homepage}">Trang chủ</a>
                 <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
-                <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
-                <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
+                <a th:href="@{/meeting/expert/incoming}">Lịch hẹn sắp tới</a>
+                <a th:href="@{/meeting/expert/history}">Lịch sử hẹn</a>
             </div>
         </div>
         <div class="header-right">
             <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
             <div class="dropdown-content">
-                <a th:href="@{/student/profile}">Thông tin cá nhân</a>
-                <a th:href="@{/student/edit}">Sửa thông tin</a>
+                <a th:href="@{/expert/profile}">Thông tin cá nhân</a>
+                <a th:href="@{/expert/edit}">Sửa thông tin</a>
                 <a th:href="@{/logout}">Đăng xuất</a>
             </div>
         </div>

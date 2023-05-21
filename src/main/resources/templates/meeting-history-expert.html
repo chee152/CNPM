@@ -44,7 +44,7 @@
 <div class="input-wrapper">
     <div class="container">
         <h1>Lịch sử tư vấn</h1>
-        <table class="show-table">
+<!--        <table class="show-table">
             <thead>
             <th>STT</th>
             <th>Ngày</th>
@@ -80,49 +80,49 @@
                 </td>
             </tr>
             </tbody>
-        </table>
+        </table>-->
         <!--        todo check lai-->
-<!--        <table class="show-table">-->
-<!--            <thead>-->
-<!--            <th>STT</th>-->
-<!--            <th>Ngày</th>-->
-<!--            <th>Thời gian</th>-->
-<!--            <th>Sinh viên</th>-->
-<!--            <th>Ghi chú</th>-->
-<!--            <th>Trạng thái</th>-->
-<!--            <th>Sửa ghi chú</th>-->
-<!--            <th></th>-->
-<!--            </thead>-->
-<!--            <tbody>-->
-<!--            <tr th:each="l,itrStat:${list}">-->
-<!--                <td th:text="${itrStat.index + 1}"></td>-->
-<!--                <td th:text="${l.date}"></td>-->
-<!--                <td th:text="${l.time_start}"></td>-->
-<!--                <td>-->
-<!--                    <p th:text="${l.student_name}"></p>-->
-<!--                    <p th:text="${l.student_phone}"></p>-->
-<!--                    <p th:text="${l.student_email}"></p>-->
-<!--                </td>-->
-<!--                <td th:text="note"></td>-->
-<!--                <td th:switch="${l.status}">-->
-<!--                    <span th:case=1>Đang chờ</span>-->
-<!--                    <span th:case=2>Xác nhận</span>-->
-<!--                    <span th:case=3>Hủy</span>-->
-<!--                    <span th:case=4>Hoàn thành</span>-->
-<!--                </td>-->
-<!--                <form method="post" th:action="@{/meeting/expert/note}">-->
-<!--                <td rowspan="2">-->
-<!--                    <textarea name="note" type="text"></textarea>-->
-<!--                    <input hidden name="id" th:value="${l.meeting_id}">-->
-<!--                </td>-->
-<!--                <td rowspan="2">-->
-<!--                    <button type="submit">Ghi nhận</button>-->
+        <table class="show-table">
+            <thead>
+            <th>STT</th>
+            <th>Ngày</th>
+            <th>Thời gian</th>
+            <th>Sinh viên</th>
+            <th>Ghi chú</th>
+            <th>Trạng thái</th>
+            <th>Sửa ghi chú</th>
+            <th></th>
+            </thead>
+            <tbody>
+            <tr th:each="l,itrStat:${list}">
+                <td th:text="${itrStat.index + 1}"></td>
+                <td th:text="${l.date}"></td>
+                <td th:text="${l.time_start}"></td>
+                <td>
+                    <p th:text="${l.student_name}"></p>
+                    <p th:text="${l.student_phone}"></p>
+                    <p th:text="${l.student_email}"></p>
+                </td>
+                <td th:text="${l.note}"></td>
+                <td th:switch="${l.status}">
+                    <span th:case=1>Đang chờ</span>
+                    <span th:case=2>Xác nhận</span>
+                    <span th:case=3>Hủy</span>
+                    <span th:case=4>Hoàn thành</span>
+                </td>
+                <form method="post" th:action="@{/meeting/expert/note}">
+                <td rowspan="2">
+                    <textarea class="note" name="note" type="text"></textarea>
+                    <input hidden name="id" th:value="${l.meeting_id}">
+                </td>
+                <td rowspan="2">
+                    <button type="submit">Ghi nhận</button>
 
-<!--                </td>-->
-<!--                </form>-->
-<!--            </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
+                </td>
+                </form>
+            </tr>
+            </tbody>
+        </table>
 
     </div>
 </div>
