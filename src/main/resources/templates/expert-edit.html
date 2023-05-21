@@ -43,6 +43,8 @@
         <form method="post" th:action="@{/expert/edit}" th:object="${expert}">
             <div class="form-input">
                 <h2>Thông tin cá nhân:</h2>
+             <input hidden th:field="*{expert_id}">
+
                 <input placeholder="Tên" th:field="*{name}">
 
                 <input placeholder="Tuổi" th:field="*{age}">
