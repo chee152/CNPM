@@ -5,9 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="noindex,nofollow,noarchive,noimageindex" name="robots"/>
     <title>UET Talk To You</title>
-    <link crossorigin="anonymous"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-          rel="stylesheet" th:href="@{https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <script src="https://kit.fontawesome.com/092be2020e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" th:href="@{/style/DanhSach.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/style/responsive.css}" type="text/css">
     <link rel="shortcut icon" th:href="@{https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png}">
@@ -17,8 +15,8 @@
 <header>
     <div class="container">
         <div class="header-left">
-            <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
-            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
+            <a th:href="@{/homepage}"><img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+            <h2 class="header-left-text">UET MENTAL CONSULTATION </h2></a>
                     <div class="nav-container">
                         <a th:href="@{/homepage}">Trang chủ</a>
                         <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
@@ -27,7 +25,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+                    <a class="dropbtn" href=""><i class="fa-solid fa-user fa-xl" style="color: #1fbbc7;"></i></a>
                         <div class="dropdown-content">
                             <a th:href="@{/student/profile}">Thông tin cá nhân</a>
                             <a th:href="@{/student/edit}">Sửa thông tin</a>

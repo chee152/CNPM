@@ -17,17 +17,17 @@
 <header>
   <div class="container">
     <div class="header-left">
-      <img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png">
+      <a th:href="@{/homepage}"><img class="logo" src="https://uet.vnu.edu.vn/wp-content/uploads/2017/02/logo2_new.png"></a>
       <h2 class="header-left-text">UET MENTAL CONSULTATION </h2>
       <div class="nav-container">
         <a th:href="@{/homepage}">Trang chủ</a>
-        <a th:href="@{/meeting/expert/incoming}">Lịch hẹn sắp tới</a>
-        <a th:href="@{/meeting/expert/history}">Lịch sử</a>
-        <a th:href="@{/freetime/list}">Thời gian rảnh</a>
+        <a th:href="@{/meeting/new}">Đặt lịch hẹn mới</a>
+        <a th:href="@{/meeting/incoming}">Lịch hẹn sắp tới</a>
+        <a th:href="@{/meeting/history}">Lịch sử hẹn</a>
       </div>
     </div>
     <div class="header-right">
-      <a class="dropbtn" href="">Xin chào <span th:text="${username}"></span></a>
+      <a class="dropbtn" href=""><i class="fa-solid fa-user fa-xl" style="color: #1fbbc7;"></i></a>
       <div class="dropdown-content">
         <a th:href="@{/expert/profile}">Thông tin cá nhân</a>
         <a th:href="@{/expert/edit}">Sửa thông tin</a>

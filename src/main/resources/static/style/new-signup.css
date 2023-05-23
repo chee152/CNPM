@@ -131,7 +131,33 @@ header {
    top: 5px;
     box-shadow: none;
 }
+.Submit-btn {
+    margin-bottom: 50px;
+    background: rgb(38, 217, 196);
+    width: 20%;
+    padding: 13px;
+    font-size: 20px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 0 5px rgb(24, 168, 113);
+    opacity: 0.95;
+    border-radius: 3px;
+}
 
+.Submit-btn:hover {
+    opacity: 1;
+    background-color: rgb(32, 199, 168);
+
+}
+
+.Submit-btn:active {
+    background-color: rgb(33, 164, 211);
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
 footer img {
     padding-top: 8px;
     width: 110px;

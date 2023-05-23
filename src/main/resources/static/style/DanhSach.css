@@ -95,7 +95,7 @@ header .container{
 .header-right {
     float: right;
     font-size: 20px;
-    margin-right: 50px;
+    margin-right: 100px;
     color: #133a60;
 }
 .header-right a{
@@ -232,6 +232,12 @@ footer img {
     cursor: pointer;
     box-shadow: 0 5px rgb(24, 168, 113);
     opacity: 0.95;
+    border-radius: 5px;
+}
+.show-table button{
+    font-size: 15px;
+    width: 100%;
+
 }
 .show-table textarea{
     width: 100%;

@@ -91,7 +91,7 @@ header {
 
 .header-right {
     float: right;
-    margin-right: 50px;
+    margin-right: 100px;
     font-size: 20px;
     color: #133a60;
 }
@@ -215,6 +215,35 @@ footer img {
     color: rgba(203, 22, 22, 0.84);
     text-align: left;
     padding-left: 10px;
+}
+.request-input  {
+    margin:0;
+}
+.request-input li{
+    margin-left: 350px;
+    text-align: left;
+}
+.request-input h3 {
+    margin-left: 350px;
+    margin-right: 200px;
+}
+.request-input input,select, textarea {
+    margin: 10px;
+    width: 80%;
+    padding: 13px;
+    font-size: 17px;
+}
+.request-input span{
+    margin-right:550px;
+    font-size: 30px;
+    color: rgba(203, 22, 22, 0.84);
+    margin-top: 1px;
+    padding-left: 50px;
+}
+.request-input h1{
+    float:left;
+    margin-left: 350px;
+
 }
 
 .Submit-btn {
